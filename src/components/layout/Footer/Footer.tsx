@@ -13,10 +13,10 @@ export default function Footer() {
           <div className="flex flex-row flex-1 justify-between">
             <div>
               <p className="mb-2">
-                <Link href="/imprint" rel="nofollow" className="text-primary underline visited:text-primary">Imprint</Link>
+                <Link prefetch={false} href="/imprint" rel="nofollow" className="text-primary underline visited:text-primary">Imprint</Link>
               </p>
               <p>
-                <Link href="/privacy" rel="nofollow" className="text-primary underline visited:text-primary">Privacy policy</Link>
+                <Link prefetch={false} href="/privacy" rel="nofollow" className="text-primary underline visited:text-primary">Privacy policy</Link>
               </p>
             </div>
             <div>
