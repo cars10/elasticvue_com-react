@@ -5,29 +5,10 @@
 :root {
   --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-size: 16px;
-  --default-border-radius: 3px;
-  --default-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --default-box-shadow--bottom: 0 2px 2px rgba(0, 0, 0, 0.3);
-  --default-box-shadow-hover: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   --default-text-color: #222;
-  --default-text-color-light: #444;
   --default-color: hsl(226, 42%, 25%);
   --default-color--dark: darken(#33447d, 20%);
-  --link-hover-color: #1e91ff;
-  --light-grey: #eee;
-  --grey: #cecece;
-
-  --grid-padding: 15px;
-  --tablet: 758px;
-
-  --header-height--mobile: $header-height - 20px;
-  --header-height--tablet: $header-height - 10px;
-
-  --content-padding: 110px;
-  --content-padding--mobile: calc(110px / 4);
-  --content-padding--tablet: calc(110px / 2);
-  --transition-duration: 0.2s ease-in;
 }
 
 * {
@@ -45,8 +26,6 @@ body {
   line-height: 1;
 }
 
-
-
 h3 {
   font-size: 1.5rem;
 }
@@ -57,10 +36,6 @@ h4 {
 
 p {
   line-height: 1.4em;
-}
-
-a, a:visited {
-  color: var(--default-color);
 }
 
 .linkUnderlineHover:after {
