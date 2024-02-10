@@ -11,7 +11,7 @@ type Props = { icon?: string, title: string, link?: { href: string, text: string
 export default function Card({ icon, title, link, badge, rating, downloads, children }: Props) {
   return (
     <>
-      <div className="text-center p-3 rounded shadow-main hover:shadow-main-ele transition-shadow duration-200 ease-in relative overflow-hidden h-full">
+      <div className="text-center p-3 rounded border-t border-[#ededed] shadow-main hover:shadow-main-ele transition-shadow duration-200 ease-in relative overflow-hidden h-full">
         {badge && <div className="font-bold absolute text-white bg-[#358639] rotate-45 -right-9 top-8 w-40 py-1 text-xs"><strong>recommended</strong></div>}
 
         <h3 className="mt-4 mb-2 text-xl font-bold">

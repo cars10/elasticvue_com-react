@@ -55,8 +55,3 @@ p {
 .linkUnderlineHover.active:after {
   width: 100%;
 }
-
-.container {
-  width: 70%;
-  max-width: 1344px;
-}
