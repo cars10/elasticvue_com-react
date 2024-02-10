@@ -47,7 +47,7 @@ export default function Header() {
             ))}
           </div>
 
-          <button aria-label="Menu" className="mr-1 p-2" onBlur={() => (setMenuOpen(false))} onClick={() => (setMenuOpen(true))}>
+          <button aria-label="Menu" className="lg:hidden mr-1 p-2" onBlur={() => (setMenuOpen(false))} onClick={() => (setMenuOpen(true))}>
             <div className="h-1 w-7 bg-white rounded mb-1"></div>
             <div className="h-1 w-7 bg-white rounded mb-1"></div>
             <div className="h-1 w-7 bg-white rounded"></div>

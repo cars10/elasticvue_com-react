@@ -7,7 +7,7 @@ import Script from 'next/script'
 import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: 'Elasticvue',
+  title: 'Elasticvue - Elasticsearch gui for the browser',
   keywords: 'elasticsearch, browser, gui, frontend, web ui',
   description: 'Elasticvue is a free and open-source elasticsearch gui for the browser',
   metadataBase: new URL('https://elasticvue.com'),

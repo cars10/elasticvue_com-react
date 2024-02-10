@@ -55,16 +55,12 @@ export default function Home() {
         <div className="lg:w-[70%] w-[95%] max-w-[1344px] mx-auto">
           <h2 className="text-3xl text-center mb-6 lg:mb-16 font-bold">Get elasticvue</h2>
 
-          <div className="w-full lg:w-1/2 mx-auto">
+          <div className="w-full lg:w-1/2 mx-auto mb-4 lg:mb-12">
             <Card title="Desktop app" link={{ href: 'https://github.com/cars10/elasticvue/releases', text: 'Elasticvue desktop' }} badge>
               <p className="mb-1">
                 Elasticvue desktop is available for linux, mac and windows. <br />Download the latest release:
               </p>
             </Card>
-          </div>
-
-          <div className="text-center my-8 lg:my-16">
-            <h4 className="text-xl">Browser extensions</h4>
           </div>
 
           <div className="flex flex-col lg:flex-row">
