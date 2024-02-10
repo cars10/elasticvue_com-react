@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import Logo from '@/images/logo/white_104.webp'
 import externalLinkSvg from '@/images/icons/external.svg'
 import OctoCat from '@/components/Octocat/Octocat'
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 const links = [
   { label: 'home', attributes: { href: '/' } },
@@ -19,6 +19,11 @@ const links = [
 export default function Header() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const navClasses = useCallback(() => {
+    if (!menuOpen) return 'py-3 mr-14 lg:mr-0 hidden lg:flex'
+    return 'absolute top-16 left-0 flex flex-col bg-primary w-full py-4 gap-4 items-start shadow-main'
+  }, [menuOpen]) 
 
   return (
     <>
@@ -33,7 +38,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="py-3 mr-14 lg:mr-0 hidden lg:flex">
+          <div className={navClasses()}>
             {links.map(({ label, attributes, external }, index) => (
               <Link
                 key={index}
@@ -47,7 +52,7 @@ export default function Header() {
             ))}
           </div>
 
-          <button aria-label="Menu" className="lg:hidden mr-1 p-2" onBlur={() => (setMenuOpen(false))} onClick={() => (setMenuOpen(true))}>
+          <button aria-label="Menu" className="lg:hidden mr-1 p-2" onBlur={() => (setMenuOpen(false))} onClick={() => (setMenuOpen(!menuOpen))}>
             <div className="h-1 w-7 bg-white rounded mb-1"></div>
             <div className="h-1 w-7 bg-white rounded mb-1"></div>
             <div className="h-1 w-7 bg-white rounded"></div>
