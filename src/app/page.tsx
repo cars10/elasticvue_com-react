@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <section className="py-32">
-        <div className="w-[70%] mx-auto text-white">
+        <div className="container mx-auto text-white">
           <div className="flex flex-1 flex-row">
             <div className="w-1/2">
               <h1 className="border-l-4 px-5 py-3 mb-16 mt-8 text-3xl">
@@ -54,7 +54,7 @@ export default function Home() {
       <Image src={Diagonal} alt="" className="w-full h-12" />
 
       <section className="bg-white py-28">
-        <div className="w-[70%] mx-auto">
+        <div className="container mx-auto">
           <h2 className="text-3xl text-center mb-16 font-bold">Get elasticvue</h2>
 
           <div className="w-1/2 mx-auto">
@@ -70,7 +70,7 @@ export default function Home() {
           <h4 className="text-xl">Browser extensions</h4>
         </div>
 
-        <div className="w-[70%] mx-auto flex">
+        <div className="container mx-auto flex">
           <div className="w-full mx-4">
             <Card
               icon={ChromeIcon}
@@ -119,7 +119,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-[70%] mx-auto mb-16 flex">
+        <div className="container mx-auto mb-16 flex">
           <div className="w-full mx-4">
             <Card title="Web app" link={{ href: 'https://app.elasticvue.com', text: 'app.elasticvue.com' }}>
               <p className="mb-1">

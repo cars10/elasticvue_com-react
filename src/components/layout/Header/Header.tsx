@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <>
       <header className="h-24 text-white py-3">
-        <div className="w-[70%] h-full mx-auto flex flex-1 flex-row justify-between">
+        <div className="container h-full mx-auto flex flex-1 flex-row justify-between">
           <div className="h-100 flex flex-1 items-center">
             <Link href="/" className="mr-3">
               <Image alt="Elasticvue logo" width={52} src={Logo} priority />
