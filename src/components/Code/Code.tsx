@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Code({ children }: { children: string }) {
+export default function Code({ children }: { children: any }) {
   return (
     <>
-      <pre className="text-left inline-block whitespace-pre-wrap break-keep bg-gray-900 text-white text-sm rounded-sm p-2 font-mono"><code>{children}</code></pre>
+      <code className="text-left inline-block whitespace-pre bg-neutral-800 text-white text-sm rounded-sm p-2 font-mono w-full overflow-x-auto">{children}</code>
     </>
   )
 }
