@@ -22,7 +22,7 @@ export default function Usage() {
         <div className="lg:w-[70%] w-[92%] max-w-[1344px] mx-auto mb-20">
           <h2 className="text-3xl font-bold mb-4">Cluster configuration</h2>
 
-          <div className="mb-8 leading-normal">
+          <div className="mb-8 leading-normal text-justify lg:text-left">
             You have to enable CORS if you use elasticvue via docker or the web app,
             otherwise the browser will reject all requests. <br />
             Edit your config file (usually <span className="bg-gray-200 px-2 py-05 text-sm font-mono rounded">elasticsearch.yml</span>)
@@ -86,7 +86,7 @@ export default function Usage() {
         <div className="lg:w-[70%] w-[92%] max-w-[1344px] mx-auto mb-20">
           <h2 className="text-3xl font-bold mb-4">Running elasticsearch in docker</h2>
 
-          <div className="mb-8 leading-normal">
+          <div className="mb-8 leading-normal text-justify lg:text-left">
             If your elasticsearch cluster is running inside docker then you probably do not use the
             <span className="bg-gray-200 px-2 py-05 text-sm font-mono rounded">elasticsearch.yml</span> config file.<br />
             In this case you can configure your cluster by passing the settings via environment variables, for

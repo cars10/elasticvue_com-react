@@ -104,7 +104,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center my-8 lg:my-16">
+          <div className="my-8 lg:my-16 text-justify lg:text-center">
             <p>
               If you don&apos;t use a browser extension then you have to configure CORS to grant the browser access to your
               cluster.
