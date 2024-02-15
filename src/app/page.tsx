@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -6,12 +7,8 @@ import Diagonal from '@/images/diagonal.svg'
 
 import Card from '@/components/Card'
 
-import ChromeIcon from '@/images/icons/chrome.svg'
-import EdgeIcon from '@/images/icons/edge.svg'
-import FirefoxIcon from '@/images/icons/firefox.svg'
-import DockerIcon from '@/images/icons/docker.svg'
-import GithubIcon from '@/images/icons/github.svg'
-import Code from '@/components/Code/Code'
+const BrowserExtensions = dynamic(() => import('@/components/pages/home/BrowserExtensions'))
+const WebDockerManual = dynamic(() => import('@/components/pages/home/WebDockerManual'))
 
 export default function Home() {
   return (
@@ -39,7 +36,7 @@ export default function Home() {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <Image alt="Screenshot" className="rounded shadow-md" src={MainImage} priority sizes='(max-width: 1344px) 40vw, (max-width: 1024px) 100vw, 40vw' quality={80} />
+              <Image alt="Screenshot" className="rounded shadow-md" src={MainImage} priority sizes='(min-width: 1344px) 40vw, 100vw' quality={80} />
             </div>
           </div>
         </div>
@@ -59,46 +56,8 @@ export default function Home() {
             </Card>
           </div>
 
-          <div className="flex flex-col lg:flex-row">
-            <div className="w-full mx-none lg:mx-4 mb-4 lg:mb-none">
-              <Card
-                icon={ChromeIcon}
-                title="Chrome extension"
-                link={{ href: 'https://chrome.google.com/webstore/detail/elasticvue/hkedbapjpblbodpgbajblpnlpenaebaa', text: 'Chrome webstore' }}
-                rating={{ amount: 55, stars: 5 }}
-              >
-                <p className="mb-1">
-                  Elasticvue is available in the chrome web store:
-                </p>
-              </Card>
-            </div>
 
-            <div className="w-full mx-none lg:mx-4 mb-4 lg:mb-none">
-              <Card
-                icon={EdgeIcon}
-                title="Edge extension"
-                link={{ href: 'https://microsoftedge.microsoft.com/addons/detail/geifniocjfnfilcbeloeidajlfmhdlgo', text: 'Microsoft webstore' }}
-                rating={{ amount: 29, stars: 4.5 }}
-              >
-                <p className="mb-1">
-                  Elasticvue is available in the microsoft store:
-                </p>
-              </Card>
-            </div>
-
-            <div className="w-full mx-none lg:mx-4 mb-4 lg:mb-none">
-              <Card
-                icon={FirefoxIcon}
-                title="Firefox addon"
-                link={{ href: 'https://addons.mozilla.org/en-US/firefox/addon/elasticvue/', text: 'Firefox addon' }}
-                rating={{ amount: 19, stars: 5 }}
-              >
-                <p className="mb-1">
-                  Elasticvue is available in the chrome web store:
-                </p>
-              </Card>
-            </div>
-          </div>
+          <BrowserExtensions />
 
           <div className="my-8 lg:my-16 text-justify lg:text-center">
             <p>
@@ -108,38 +67,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mb-8 lg:mb-16 flex flex-col lg:flex-row">
-            <div className="w-full mx-none lg:mx-4 mb-4 lg:mb-none">
-              <Card title="Web app" link={{ href: 'https://app.elasticvue.com', text: 'app.elasticvue.com' }}>
-                <p className="mb-1">
-                  You can use the hosted version of elasticvue to avoid installing anything.
-                </p>
-              </Card>
-            </div>
-
-            <div className="w-full mx-none lg:mx-4 mb-4 lg:mb-none">
-              <Card icon={DockerIcon} title="Docker image" downloads="350k+">
-                <p className="mb-3">
-                  Download and run <a href="https://hub.docker.com/r/cars10/elasticvue" rel="noopener" target="_blank" className="text-primary underline visited:text-primary">the image</a>
-                </p>
-                <div className="overflow-x-auto inline-block mb-3">
-                  <Code>{`docker run -p 8080:8080 --name elasticvue 
-           -d cars10/elasticvue`}</Code>
-                </div>
-                <p>
-                  Then open <a href="http://localhost:8080" rel="noopener" target="_blank" className="text-primary underline visited:text-primary">http://localhost:8080</a>
-                </p>
-              </Card>
-            </div>
-
-            <div className="w-full mx-none lg:mx-4 mb-4 lg:mb-none">
-              <Card title="Building manually" icon={GithubIcon}>
-                <p className="mb-1">
-                  Check the <a href="https://github.com/cars10/elasticvue" rel="noopener" target="_blank" className="text-primary underline visited:text-primary">readme</a> for instructions on how to manually build elasticvue.
-                </p>
-              </Card>
-            </div>
-          </div>
+          <WebDockerManual />
 
           <p className="text-center">
             Checkout <Link href="/usage" className="text-primary underline visited:text-primary">usage</Link> for details on how to configure your cluster to use elasticvue.

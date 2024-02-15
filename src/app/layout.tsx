@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import Header from '@/components/layout/Header/Header'
 import Footer from '@/components/layout/Footer/Footer'
 import '../styles/globals.css'
-import React from 'react'
+import type React from 'react'
 import Script from 'next/script'
 import Head from 'next/head'
 
