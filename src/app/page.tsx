@@ -20,7 +20,7 @@ export default function Home() {
         <div className="lg:w-[70%] w-[92%] max-w-[1344px] mx-auto text-white">
           <div className="flex flex-1 flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-none">
-              <h1 className="border-l-[3px] lg:border-l-4 px-2 lg:px-5 py-2 lg:py-3 mb-6 lg:mb-16 lg:mt-8 text-lg lg:text-3xl leading-tight">
+              <h1 className="border-l-[3px] lg:border-l-4 px-2 lg:px-5 py-2 lg:py-3 mb-8 lg:mb-16 lg:mt-8 text-lg lg:text-3xl leading-tight">
                 <strong>Elasticvue</strong> is a free and open-source
                 elasticsearch gui for the browser.
               </h1>
@@ -33,11 +33,7 @@ export default function Home() {
                 <li className="my-2">REST Query interface</li>
                 <li className="my-2">Snapshot management</li>
                 <li className="my-2">
-                  ...
-                  <Link href="/features" className="text-white underline">
-                    {' '}
-                    and more
-                  </Link>
+                  ... <Link href="/features" className="text-white underline">and more</Link>
                 </li>
               </ul>
             </div>
