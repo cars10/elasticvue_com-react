@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "baguettebox.js": "^1.11.1",
     "cssnano": "^6.0.3",
     "next": "14.1.0",
     "react": "^18",

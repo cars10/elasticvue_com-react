@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import MainImage from '../images/images/main.webp'
+import MainImage from '../images/main.webp'
 import Diagonal from '@/images/diagonal.svg'
 
 import Card from '@/components/Card'
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="lg:w-[70%] w-[92%] max-w-[1344px] mx-auto text-white">
           <div className="flex flex-1 flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-none">
-              <h1 className="border-l-[3px] lg:border-l-4 px-2 lg:px-5 py-2 lg:py-3 mb-8 lg:mb-16 lg:mt-8 text-lg lg:text-3xl leading-tight">
+              <h1 className="border-l-[3px] lg:border-l-4 px-2 lg:px-5 py-2 lg:py-3 mb-8 lg:mb-16 lg:mt-4 text-lg lg:text-3xl leading-tight">
                 <strong>Elasticvue</strong> is a free and open-source
                 elasticsearch gui for the browser.
               </h1>
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <Image alt="Screenshot" className="rounded shadow-md" src={MainImage} priority />
+              <Image alt="Screenshot" className="rounded shadow-md" src={MainImage} priority sizes='(max-width: 1344px) 40vw, (max-width: 1024px) 100vw, 40vw' quality={80} />
             </div>
           </div>
         </div>
