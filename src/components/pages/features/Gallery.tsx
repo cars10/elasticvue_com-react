@@ -1,8 +1,3 @@
-'use client'
-
-import baguetteBox from 'baguettebox.js'
-import 'baguettebox.js/dist/baguetteBox.min.css'
-import { useEffect } from 'react'
 import Showcase from './Showcase'
 
 import Screenshot1 from '@/images/screenshots/website-1-home.webp'
@@ -16,14 +11,6 @@ import Screenshot8 from '@/images/screenshots/website-8-rest.webp'
 import Screenshot9 from '@/images/screenshots/website-9-settings.webp'
 
 export default function Gallery() {
-  useEffect(() => {
-    baguetteBox.run('.gallery-wrapper', {
-      noScrollbars: true,
-      titleTag: true,
-      async: true
-    })
-  }, [])
-
   return (
     <>
       <div className="gallery-wrapper">

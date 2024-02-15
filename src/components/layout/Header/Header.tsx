@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 import Logo from '@/images/logo/white_104.webp'
 import externalLinkSvg from '@/images/icons/external.svg'
-import OctoCat from '@/components/Octocat/Octocat'
+import OctoCat from '@/components/layout/Header/Octocat/Octocat'
 import { useCallback, useState } from 'react'
 
 const links = [

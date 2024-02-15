@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "baguettebox.js": "^1.11.1",
     "cssnano": "^6.0.3",
     "next": "14.1.0",
     "react": "^18",
@@ -26,5 +25,8 @@
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    "defaults, >1%, not dead"
+  ]
 }

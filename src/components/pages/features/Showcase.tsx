@@ -1,8 +1,15 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
 
 type Props = { title: string, image: { src: any, priority?: boolean }, reverse?: boolean, children: any }
 
 export default function Showcase({ title, image: { src, priority }, reverse, children }: Props) {
+  const [open, setOpen] = useState(false)
+
+  const toggleOpen = () => (setOpen(!open))
+
   return (
     <>
       <section className={`${reverse ? 'bg-primary text-white' : 'bg-white'} py-4 lg:py-28 lg:mb-none`}>
@@ -14,10 +21,14 @@ export default function Showcase({ title, image: { src, priority }, reverse, chi
               {children}
             </div>
 
-            <div className="w-full lg:w-1/2">
-              <a href={src.src} data-caption={title}>
-                <Image src={src} alt={title} className="shadow-main hover:shadow-main-ele rounded" priority={priority} />
-              </a>
+            <div
+              className={`${open ? 'fixed bg-black top-0 left-0 bottom-0 right-0 h-full p-20 bg-opacity-75' : 'w-full lg:w-1/2'} cursor-pointer`}
+              onClickCapture={toggleOpen}>
+              <Image
+                src={src}
+                alt={title}
+                priority={priority}
+                className={`${open ? '' : ''} shadow-main hover:shadow-main-ele rounded`} />
             </div>
           </div>
         </div>
