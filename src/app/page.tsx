@@ -127,7 +127,8 @@ export default function Home() {
                   Download and run <a href="https://hub.docker.com/r/cars10/elasticvue" rel="noopener" target="_blank" className="text-primary underline visited:text-primary">the image</a>
                 </p>
                 <div className="overflow-x-auto inline-block mb-3">
-                  <Code>docker run -p 8080:8080 --name elasticvue -d cars10/elasticvue</Code>
+                  <Code>{`docker run -p 8080:8080 --name elasticvue 
+           -d cars10/elasticvue`}</Code>
                 </div>
                 <p>
                   Then open <a href="http://localhost:8080" rel="noopener" target="_blank" className="text-primary underline visited:text-primary">http://localhost:8080</a>
