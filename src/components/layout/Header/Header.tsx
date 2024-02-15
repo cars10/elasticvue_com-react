@@ -38,7 +38,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className={navClasses()}>
+          <div className={navClasses()} onClick={() => (setMenuOpen(false))}>
             {links.map(({ label, attributes, external }, index) => (
               <Link
                 key={index}
@@ -52,7 +52,7 @@ export default function Header() {
             ))}
           </div>
 
-          <button aria-label="Menu" className="lg:hidden mr-1 p-2" onBlur={() => (setMenuOpen(false))} onClick={() => (setMenuOpen(!menuOpen))}>
+          <button aria-label="Menu" className="lg:hidden mr-1 p-2" onClick={() => (setMenuOpen(!menuOpen))}>
             <div className="h-1 w-7 bg-white rounded mb-1"></div>
             <div className="h-1 w-7 bg-white rounded mb-1"></div>
             <div className="h-1 w-7 bg-white rounded"></div>
