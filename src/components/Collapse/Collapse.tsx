@@ -7,7 +7,7 @@ export default function Collapse({ name, title, children }: { name: string, titl
   const [checked, setChecked]= useState(false)
 
   const toggle = (e: KeyboardEvent) => {
-    if (e.keyCode == 13) setChecked(!checked)
+    if (e.keyCode === 13) setChecked(!checked)
   }
 
   return (

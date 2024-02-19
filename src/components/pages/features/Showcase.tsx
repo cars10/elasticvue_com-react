@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Props = { title: string, image: { src: any, priority?: boolean }, reverse?: boolean, children: any }
 
@@ -9,6 +9,14 @@ export default function Showcase({ title, image: { src, priority }, reverse, chi
   const [open, setOpen] = useState(false)
 
   const toggleOpen = () => (setOpen(!open))
+  const keyListener = (e: KeyboardEvent) => {
+    if (e.keyCode === 27) setOpen(false)
+  }
+
+  useEffect(() => {
+    if (open) window.addEventListener('keydown', keyListener)
+    return () => window.removeEventListener('keydown', keyListener)
+  }, [open])
 
   return (
     <>
@@ -26,6 +34,7 @@ export default function Showcase({ title, image: { src, priority }, reverse, chi
                 src={src}
                 alt={title}
                 priority={priority}
+                sizes='(min-width: 1344px) 40vw, 100vw'
                 className="shadow-main hover:shadow-main-ele rounded" />
             </div>
 
@@ -36,6 +45,7 @@ export default function Showcase({ title, image: { src, priority }, reverse, chi
                 src={src}
                 alt={title}
                 priority={priority}
+                quality={100}
                 className="mx-auto shadow-main hover:shadow-main-ele rounded" />
             </div>
           </div>
