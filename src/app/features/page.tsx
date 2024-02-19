@@ -2,8 +2,14 @@
 import Image from 'next/image'
 import Diagonal from '@/images/diagonal.svg'
 import Gallery from '@/components/pages/features/Gallery'
+import { Metadata } from 'next'
 
-export default function Features() {
+export const metadata: Metadata = {
+  title: 'Elasticvue - Elasticsearch gui features',
+  description: 'Elasticvue features cluster management, document searching, a rest query interface and more.'
+}
+
+export default function Page() {
   return (
     <>
       <section className="py-4 lg:py-24 mb-4 lg:mb-none">

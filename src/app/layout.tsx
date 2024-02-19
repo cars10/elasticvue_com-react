@@ -12,8 +12,6 @@ export const metadata: Metadata = {
   description: 'Elasticvue is a free and open-source elasticsearch gui for the browser',
   metadataBase: new URL('https://elasticvue.com'),
   openGraph: {
-    title: 'Elasticvue - Elasticsearch gui for the browser',
-    description: 'Elasticvue is a free and open-source elasticsearch gui for the browser',
     type: 'website',
     url: 'https://elasticvue.com'
   },

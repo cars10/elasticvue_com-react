@@ -2,8 +2,14 @@ import Image from 'next/image'
 import Diagonal from '@/images/diagonal.svg'
 import Collapse from '@/components/Collapse/Collapse'
 import Code from '@/components/Code/Code'
+import { Metadata } from 'next'
 
-export default function Usage() {
+export const metadata: Metadata = {
+  title: 'Elasticvue - Elasticsearch gui usage',
+  description: 'Use elasticvue as desktop app, browser extension, docker container or self hosted.'
+}
+
+export default function Page() {
   return (
     <>
       <section className="py-4 lg:py-24 mb-4 lg:mb-none">
