@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import Logo from '@/images/logo/white_104.webp'
 import externalLinkSvg from '@/images/icons/external.svg'
 import OctoCat from '@/components/layout/Header/Octocat/Octocat'
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 
 const links = [
   { label: 'home', attributes: { href: '/' } },
@@ -19,11 +19,6 @@ const links = [
 export default function Header() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
-
-  const navClasses = useCallback(() => {
-    if (!menuOpen) return 'py-3 mr-14 lg:mr-0 hidden lg:flex'
-    return 'absolute top-16 left-0 flex flex-col bg-primary w-full py-4 gap-4 items-start shadow-main'
-  }, [menuOpen]) 
 
   return (
     <>
@@ -38,7 +33,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className={navClasses()} onClick={() => (setMenuOpen(false))}>
+          <div className={`${menuOpen ? 'absolute top-16 left-0 flex flex-col bg-primary w-full py-4 gap-4 items-start shadow-main' : 'py-3 mr-14 lg:mr-0 hidden lg:flex'}`} onClick={() => (setMenuOpen(false))}>
             {links.map(({ label, attributes, external }, index) => (
               <Link
                 key={index}
