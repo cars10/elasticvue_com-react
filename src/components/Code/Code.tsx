@@ -3,7 +3,9 @@ import type React from 'react'
 export default function Code({ children }: { children: any }) {
   return (
     <>
-      <code className="text-left inline-block whitespace-pre bg-neutral-800 text-white text-sm rounded-sm p-2 font-mono w-full overflow-x-auto">{children}</code>
+      <code className='inline-block w-full overflow-x-auto whitespace-pre rounded-sm bg-neutral-800 p-2 text-left font-mono text-sm text-white'>
+        {children}
+      </code>
     </>
   )
 }
