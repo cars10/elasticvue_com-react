@@ -10,7 +10,7 @@ export default function Showcase({ title, image: { src, priority }, reverse, chi
 
   const toggleOpen = () => (setOpen(!open))
   const keyListener = (e: KeyboardEvent) => {
-    if (e.keyCode === 27) setOpen(false)
+    if (e.key === 'Escape') setOpen(false)
   }
 
   useEffect(() => {
