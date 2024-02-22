@@ -13,7 +13,16 @@ const links = [
   { label: 'home', attributes: { href: '/' } },
   { label: 'usage', attributes: { href: '/usage' } },
   { label: 'features', attributes: { href: '/features' } },
-  { label: 'code', attributes: { href: 'https://github.com/cars10/elasticvue', rel: 'noopened', target: '_blank', prefetch: false }, external: true }
+  {
+    label: 'code',
+    attributes: {
+      href: 'https://github.com/cars10/elasticvue',
+      rel: 'noopened',
+      target: '_blank',
+      prefetch: false
+    },
+    external: true
+  }
 ]
 
 export default function Header() {
@@ -22,35 +31,58 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-16 lg:h-24 text-white py-3">
-        <div className="lg:w-[70%] w-[92%] max-w-[1344px] h-full mx-auto flex flex-1 flex-row justify-between">
+      <header className="h-16 py-3 text-white lg:h-24">
+        <div className="mx-auto flex h-full w-[92%] max-w-[1344px] flex-1 flex-row justify-between lg:w-[70%]">
           <div className="h-100 flex flex-1 items-center">
             <Link href="/" className="mr-3">
-              <Image alt="Elasticvue logo" width={52} src={Logo} priority className="w-9 lg:w-[52px]" />
+              <Image
+                alt="Elasticvue logo"
+                width={52}
+                src={Logo}
+                priority
+                className="w-9 lg:w-[52px]"
+              />
             </Link>
-            <Link href="/" className="text-white visited:text-white text-2xl lg:text-3xl leading-none mt-1 lg:mt-0">
+            <Link
+              href="/"
+              className="mt-1 text-2xl leading-none text-white visited:text-white lg:mt-0 lg:text-3xl"
+            >
               <span className="linkUnderlineHover">elasticvue</span>
             </Link>
           </div>
 
-          <div className={`${menuOpen ? 'absolute top-16 left-0 flex flex-col bg-primary w-full py-4 gap-4 items-start shadow-main' : 'py-3 mr-14 lg:mr-0 hidden lg:flex'}`} onClick={() => (setMenuOpen(false))}>
+          <div
+            className={`${menuOpen ? 'absolute left-0 top-16 flex w-full flex-col items-start gap-4 bg-primary py-4 shadow-main' : 'mr-14 hidden py-3 lg:mr-0 lg:flex'}`}
+            onClick={() => setMenuOpen(false)}
+          >
             {links.map(({ label, attributes, external }, index) => (
               <Link
                 key={index}
-                className={`ml-4 lg:ml-10 px-3 py-1 inline-block h-8 text-xl text-white visited:text-white leading-none linkUnderlineHover ${pathname === attributes.href ? 'active' : ''}`}
+                className={`linkUnderlineHover ml-4 inline-block h-8 px-3 py-1 text-xl leading-none text-white visited:text-white lg:ml-10 ${pathname === attributes.href ? 'active' : ''}`}
                 {...attributes}
               >
-                {external && <Image src={externalLinkSvg} alt=">" className="inline-block mr-2" width="14" />}
+                {external && (
+                  <Image
+                    src={externalLinkSvg}
+                    alt=">"
+                    className="mr-2 inline-block"
+                    width="14"
+                  />
+                )}
 
                 {label}
               </Link>
             ))}
           </div>
 
-          <button aria-label="Menu" className="lg:hidden mr-1 p-2" onClick={() => (setMenuOpen(!menuOpen))}>
-            <div className="h-1 w-7 bg-white rounded mb-1"></div>
-            <div className="h-1 w-7 bg-white rounded mb-1"></div>
-            <div className="h-1 w-7 bg-white rounded"></div>
+          <button
+            aria-label="Menu"
+            className="mr-1 p-2 lg:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <div className="mb-1 h-1 w-7 rounded bg-white"></div>
+            <div className="mb-1 h-1 w-7 rounded bg-white"></div>
+            <div className="h-1 w-7 rounded bg-white"></div>
           </button>
         </div>
 

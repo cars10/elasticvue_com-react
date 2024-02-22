@@ -3,7 +3,7 @@ import styles from './Octocat.module.css'
 export default function OctoCat() {
   return (
     <svg
-      className={`${styles.octocat} top-0 right-0 absolute fill-white`}
+      className={`${styles.octocat} absolute right-0 top-0 fill-white`}
       aria-hidden="true"
       height="78"
       viewBox="0 0 250 250"
