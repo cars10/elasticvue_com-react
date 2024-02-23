@@ -15,8 +15,6 @@ export default function imprint() {
             >
               carstenkoenig92@gmail.com
             </a>
-
-            <small>1</small>
           </div>
         </div>
       </section>
