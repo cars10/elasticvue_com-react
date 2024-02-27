@@ -5,8 +5,9 @@ import Link from 'next/link'
 import MainImage from '../images/main.webp'
 import Diagonal from '@/images/diagonal.svg'
 
-import Card from '@/components/Card'
-
+const DesktopApp = dynamic(
+  () => import('@/components/pages/home/DesktopApp')
+)
 const BrowserExtensions = dynamic(
   () => import('@/components/pages/home/BrowserExtensions')
 )
@@ -60,32 +61,21 @@ export default function Home() {
 
       <section className="bg-white py-8 lg:py-32">
         <div className="mx-auto w-[95%] max-w-[1344px] lg:w-[70%]">
-          <h2 className="mb-6 text-center text-3xl font-bold lg:mb-16">
-            Get elasticvue
+          <h2 className="mb-6 text-center text-xl lg:text-3xl lg:mb-16">
+            Get elasticvue desktop ...
           </h2>
 
-          <div className="mx-auto mb-4 w-full lg:mb-12 lg:w-1/2">
-            <Card
-              title="Desktop app"
-              link={{
-                href: 'https://github.com/cars10/elasticvue/releases',
-                text: 'Elasticvue desktop'
-              }}
-              badge
-            >
-              <p className="mb-1">
-                Elasticvue desktop is available for linux, mac and windows.{' '}
-                <br />
-                Download the latest release:
-              </p>
-            </Card>
-          </div>
+          <DesktopApp />
+
+          <h2 className="my-6 text-center lg:text-3xl lg:my-16">
+            ... or the elasticvue browser extension
+          </h2>
 
           <BrowserExtensions />
 
-          <div className="my-8 text-justify lg:my-16 lg:text-center">
+          <div className="my-8 text-justify text-xl lg:my-16 lg:text-center">
             <p>
-              If you don&apos;t use a browser extension then you have to
+              If you don&apos;t use the desktop app or a browser extension then you have to
               configure CORS to grant the browser access to your cluster.
               <br />
               Elasticvue will guide you on how to configure your cluster when

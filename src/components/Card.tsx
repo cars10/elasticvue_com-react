@@ -9,7 +9,8 @@ import Rating from './Rating'
 type Props = {
   icon?: string
   title: string
-  link?: { href: string; text: string }
+  link?: { href: string; text: string },
+  links?: { href: string; text: string }[]
   badge?: boolean
   rating?: { amount: number; stars: number }
   downloads?: string
@@ -20,6 +21,7 @@ export default function Card({
   icon,
   title,
   link,
+  links,
   badge,
   rating,
   downloads,
@@ -64,24 +66,33 @@ export default function Card({
         <div className="p-3">
           {children}
 
-          {link && (
-            <a
-              className="mb-2 mt-3 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light"
-              href={link.href}
-              rel="noopener"
-              target="_blank"
-            >
-              <Image
-                src={externalLink}
-                alt=">"
-                width="14"
-                className="mb-1 mr-2 inline-block"
-              />{' '}
-              <span className="inline-block">{link.text}</span>
-            </a>
-          )}
+          {link && (<Button link={link} />)}
+          <div className="flex flex-col lg:flex-row justify-evenly">
+            {links && links.map((link, index) => (<Button link={link} key={index} />))}
+          </div>
         </div>
       </div>
+    </>
+  )
+}
+
+const Button = ({ link }: { link: { href: string, text: string } }) => {
+  return (
+    <>
+      <a
+        className="mb-2 mt-3 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light"
+        href={link.href}
+        rel="noopener"
+        target="_blank"
+      >
+        <Image
+          src={externalLink}
+          alt=">"
+          width="14"
+          className="mb-1 mr-2 inline-block"
+        />{' '}
+        <span className="inline-block">{link.text}</span>
+      </a>
     </>
   )
 }
