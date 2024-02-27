@@ -7,10 +7,10 @@ import Script from 'next/script'
 import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: 'Elasticvue - Elasticsearch gui for the browser',
+  title: 'Elasticvue - Elasticsearch gui',
   keywords: 'elasticsearch, browser, gui, frontend, web ui',
   description:
-    'Elasticvue is a free and open-source elasticsearch gui for the browser',
+    'Elasticvue is a free and open-source elasticsearch gui for the browser or desktop',
   metadataBase: new URL('https://elasticvue.com'),
   openGraph: {
     type: 'website',

@@ -24,7 +24,7 @@ export default function Home() {
             <div className="lg:mb-none mb-8 w-full lg:w-1/2">
               <h1 className="mb-8 border-l-[3px] px-2 py-2 text-lg leading-tight lg:mb-16 lg:mt-4 lg:border-l-4 lg:px-5 lg:py-3 lg:text-3xl">
                 <strong>Elasticvue</strong> is a free and open-source
-                elasticsearch gui for the browser.
+                elasticsearch gui
               </h1>
 
               <h2 className="mb-4 text-2xl font-bold">Features</h2>
@@ -67,13 +67,13 @@ export default function Home() {
 
           <DesktopApp />
 
-          <h2 className="my-6 text-center lg:text-3xl lg:my-16">
+          <h2 className="my-6 text-center text-xl lg:text-3xl lg:my-16">
             ... or the elasticvue browser extension
           </h2>
 
           <BrowserExtensions />
 
-          <div className="my-8 text-justify text-xl lg:my-16 lg:text-center">
+          <div className="my-8 lg:text-xl lg:my-16 text-center">
             <p>
               If you don&apos;t use the desktop app or a browser extension then you have to
               configure CORS to grant the browser access to your cluster.
