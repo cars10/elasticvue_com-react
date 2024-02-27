@@ -51,7 +51,7 @@ export default function BrowserExtensions() {
             rating={{ amount: 19, stars: 5 }}
           >
             <p className="mb-1">
-              Elasticvue is available in the chrome web store:
+              Elasticvue is available in the mozilla store:
             </p>
           </Card>
         </div>
