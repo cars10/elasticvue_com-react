@@ -32,4 +32,4 @@ jobs:
           timeout: 60000
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json", "authorization": "${{ secrets.AUTODOK_API_KEY }}"}'
-          data: '{"container": "elasticvue_com-react", "image": "ghcr.io/cars10/elasticvue_com", "registry": {"username": "${{ secrets.DOCKER_USERNAME }}", "password": "${{ secrets.DOCKER_PASSWORD }}", "serveraddress": "ghrc.io"}}'
+          data: '{"container": "elasticvue_com", "image": "ghcr.io/cars10/elasticvue_com"}'
