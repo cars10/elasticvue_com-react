@@ -1,11 +1,10 @@
 docker_build:
-	docker build . -t elasticvue_com
+	docker build . -t ghcr.io/cars10/elasticvue_com:latest
 
 docker_run:
-	docker run --rm -p 3000:3000 elasticvue_com
+	docker run --rm -p 3001:3000 --name elasticvue_com ghcr.io/cars10/elasticvue_com:latest
 
 docker_push:
-	docker tag elasticvue_com:latest ghcr.io/cars10/elasticvue_com:latest
 	docker push ghcr.io/cars10/elasticvue_com:latest
 
 prod: docker_build docker_push
