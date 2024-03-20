@@ -59,15 +59,11 @@ export default function Page() {
                 Add the following to your elasticsearch configuration:
               </p>
               <Code>
-                <p>http.cors.enabled: true</p>
-                <p>http.cors.allow-origin: /https:\/\/app.elasticvue.com/</p>
+                http.cors.enabled: true <br />
+                http.cors.allow-origin: /https:\/\/app.elasticvue.com/ <br />
                 <br />
-                <p className="text-lime-400">
-                  # and if your cluster is password protected you also have to
-                  add:
-                </p>
-                http.cors.allow-headers:
-                X-Requested-With,Content-Type,Content-Length,Authorization
+                <span className="text-lime-400"># and if your cluster is password protected you also have to add:</span> <br />
+                http.cors.allow-headers: X-Requested-With,Content-Type,Content-Length,Authorization
               </Code>
             </Collapse>
           </div>
@@ -90,15 +86,11 @@ export default function Page() {
                 Add the following to your elasticsearch configuration:
               </p>
               <Code>
-                <p>http.cors.enabled: true</p>
-                <p>http.cors.allow-origin: &quot;http://localhost:8080&quot;</p>
+                http.cors.enabled: true <br />
+                http.cors.allow-origin: &quot;http://localhost:8080&quot; <br />
                 <br />
-                <p className="text-lime-400">
-                  # and if your cluster is password protected you also have to
-                  add:
-                </p>
-                http.cors.allow-headers:
-                X-Requested-With,Content-Type,Content-Length,Authorization
+                <span className="text-lime-400"># and if your cluster is password protected you also have to add:</span> <br />
+                http.cors.allow-headers: X-Requested-With,Content-Type,Content-Length,Authorization
               </Code>
             </Collapse>
           </div>
@@ -118,15 +110,11 @@ export default function Page() {
                 </span>
               </p>
               <Code>
-                <p>http.cors.enabled: true</p>
-                <p>http.cors.allow-origin: &quot;http://localhost:8080&quot;</p>
+                http.cors.enabled: true <br />
+                http.cors.allow-origin: &quot;http://localhost:8080&quot; <br />
                 <br />
-                <p className="text-lime-400">
-                  # and if your cluster is password protected you also have to
-                  add:
-                </p>
-                http.cors.allow-headers:
-                X-Requested-With,Content-Type,Content-Length,Authorization
+                <span className="text-lime-400"># and if your cluster is password protected you also have to add:</span> <br />
+                http.cors.allow-headers: X-Requested-With,Content-Type,Content-Length,Authorization
               </Code>
             </Collapse>
           </div>
@@ -161,7 +149,7 @@ export default function Page() {
            -e "discovery.type=single-node" \\
            -p 9200:9200 \\
            -p 9300:9300 \\
-           docker.elastic.co/elasticsearch/elasticsearch:7.8.0`}</Code>
+           docker.elastic.co/elasticsearch/elasticsearch:8.12.2`}</Code>
         </div>
 
         <div className="mx-auto w-[92%] max-w-[1344px] lg:w-[70%]">

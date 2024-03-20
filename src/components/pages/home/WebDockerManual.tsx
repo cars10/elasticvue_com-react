@@ -36,9 +36,10 @@ export default function WebDockerManual() {
                 the image
               </a>
             </p>
-            <div className="mb-3 inline-block overflow-x-auto">
-              <Code>{`docker run -p 8080:8080 --name elasticvue 
-           -d cars10/elasticvue`}</Code>
+            <div className="mb-3">
+              <Code>{`docker run -p 8080:8080 --name elasticvue \\
+           -d cars10/elasticvue`}      
+              </Code>
             </div>
             <p>
               Then open{' '}

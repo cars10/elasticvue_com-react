@@ -80,7 +80,7 @@ const Button = ({ link }: { link: { href: string, text: string } }) => {
   return (
     <>
       <a
-        className="mb-2 mt-3 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light"
+        className="mb-2 mt-3 mx-1 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light"
         href={link.href}
         rel="noopener"
         target="_blank"
