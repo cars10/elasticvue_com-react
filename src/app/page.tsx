@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import MainImage from '../images/main.webp'
-import Diagonal from '@/images/diagonal.svg'
 
 const DesktopApp = dynamic(
   () => import('@/components/pages/home/DesktopApp')
@@ -57,9 +56,12 @@ export default function Home() {
         </div>
       </section>
 
-      <Image src={Diagonal} alt="" className="hidden h-12 w-full lg:block" />
+      <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="hidden h-12 w-full lg:block">
+        <polygon fill-opacity="0" points="0,0 100,0 0,100" />
+        <polygon points="0,100 100,100 100,0" className="fill-white dark:fill-dark" />
+      </svg>
 
-      <section className="bg-white py-8 lg:py-32">
+      <section className="bg-white py-8 lg:py-32 dark:bg-dark dark:text-white">
         <div className="mx-auto w-[95%] max-w-[1344px] lg:w-[70%]">
           <h2 className="mb-6 text-center text-xl lg:text-3xl lg:mb-16">
             Get elasticvue desktop ...
@@ -89,7 +91,7 @@ export default function Home() {
             Checkout{' '}
             <Link
               href="/usage"
-              className="text-primary underline visited:text-primary"
+              className="text-primary underline visited:text-primary dark:text-white dark:visited:text-white"
             >
               usage
             </Link>{' '}

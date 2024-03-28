@@ -13,7 +13,7 @@ import Screenshot9 from '@/images/screenshots/website-9-settings.webp'
 export default function Gallery() {
   return (
     <>
-      <div className="gallery-wrapper">
+      <div>
         <Showcase
           title="Cluster overview"
           image={{ src: Screenshot1, priority: true }}

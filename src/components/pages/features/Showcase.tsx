@@ -31,7 +31,7 @@ export default function Showcase({
   return (
     <>
       <section
-        className={`${reverse ? 'bg-primary text-white' : 'bg-white'} lg:mb-none py-4 lg:py-28`}
+        className={`${reverse ? 'bg-primary text-white' : 'bg-white dark:bg-dark dark:text-white'} lg:mb-none py-4 lg:py-28`}
       >
         <div className="mx-auto w-[92%] max-w-[1344px] lg:w-[70%]">
           <div

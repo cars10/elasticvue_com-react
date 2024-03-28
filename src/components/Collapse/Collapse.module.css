@@ -10,6 +10,12 @@
   transform: translateY(-2px);
 }
 
+@media (prefers-color-scheme: dark) {
+  .collapseToggle::before {
+    border-left-color: #fff;
+  }
+}
+
 .collapseToggleInput:checked + .collapseToggle::before {
   transform: rotate(90deg) translateX(-3px);
 }

@@ -31,7 +31,7 @@ export default function WebDockerManual() {
                 href="https://hub.docker.com/r/cars10/elasticvue"
                 rel="noopener"
                 target="_blank"
-                className="text-primary underline visited:text-primary"
+                className="text-primary underline visited:text-primary dark:text-white dark:visited:text-white"
               >
                 the image
               </a>
@@ -47,7 +47,7 @@ export default function WebDockerManual() {
                 href="http://localhost:8080"
                 rel="noopener"
                 target="_blank"
-                className="text-primary underline visited:text-primary"
+                className="text-primary underline visited:text-primary dark:text-white dark:visited:text-white"
               >
                 http://localhost:8080
               </a>
@@ -63,7 +63,7 @@ export default function WebDockerManual() {
                 href="https://github.com/cars10/elasticvue"
                 rel="noopener"
                 target="_blank"
-                className="text-primary underline visited:text-primary"
+                className="text-primary underline visited:text-primary dark:text-white dark:visited:text-white"
               >
                 readme
               </a>{' '}

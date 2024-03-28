@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Diagonal from '@/images/diagonal.svg'
 import Gallery from '@/components/pages/features/Gallery'
 import { Metadata } from 'next'
 
@@ -21,12 +19,10 @@ export default function Page() {
         </div>
       </section>
 
-      <Image
-        src={Diagonal}
-        alt=""
-        className="hidden h-12 w-full lg:block"
-        priority
-      />
+      <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="hidden h-12 w-full lg:block">
+        <polygon fill-opacity="0" points="0,0 100,0 0,100" />
+        <polygon points="0,100 100,100 100,0" className="fill-white dark:fill-dark" />
+      </svg>
 
       <Gallery />
     </>

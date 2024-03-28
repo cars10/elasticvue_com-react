@@ -29,7 +29,7 @@ export default function Card({
 }: Props) {
   return (
     <>
-      <div className="relative h-full overflow-hidden rounded border-t border-[#ededed] p-3 text-center shadow-main transition-shadow duration-200 ease-in hover:shadow-main-ele">
+      <div className="relative h-full overflow-hidden rounded border-t border-[#ededed] p-3 text-center shadow-main transition-shadow duration-200 ease-in hover:shadow-main-ele dark:bg-secondary dark:border-none">
         {badge && (
           <div className="absolute -right-9 top-8 w-40 rotate-45 bg-[#358639] py-1 text-xs font-bold text-white">
             <strong>recommended</strong>
@@ -80,7 +80,7 @@ const Button = ({ link }: { link: { href: string, text: string } }) => {
   return (
     <>
       <a
-        className="mb-2 mt-3 mx-1 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light"
+        className="mb-2 mt-3 mx-1 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light dark:bg-primary-intense"
         href={link.href}
         rel="noopener"
         target="_blank"
