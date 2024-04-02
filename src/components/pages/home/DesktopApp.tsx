@@ -16,6 +16,7 @@ export default function DesktopApp() {
               href: 'https://update.elasticvue.com/download/windows/x86_64',
               text: 'Download msi'
             }}
+            badge={true}
           >
             <p className="mb-1">
               Elasticvue is available on windows:
@@ -31,6 +32,7 @@ export default function DesktopApp() {
               { href: 'https://update.elasticvue.com/download/darwin/x86_64', text: 'x86_64 dmg' }, 
               { href: 'https://update.elasticvue.com/download/darwin/aarch64', text: 'aarch64 dmg' }
             ]}
+            badge={true}
           >
             <p className="mb-1">
               Elasticvue is available for macos:
@@ -46,6 +48,7 @@ export default function DesktopApp() {
               href: 'https://update.elasticvue.com/download/linux/x86_64',
               text: 'Download AppImage'
             }}
+            badge={true}
           >
             <p className="mb-1">
               Elasticvue is available for linux:

@@ -24,7 +24,7 @@ export default function Page() {
       </section>
 
       <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="hidden h-12 w-full lg:block">
-        <polygon fill-opacity="0" points="0,0 100,0 0,100" />
+        <polygon fillOpacity="0" points="0,0 100,0 0,100" />
         <polygon points="0,100 100,100 100,0" className="fill-white dark:fill-dark" />
       </svg>
 

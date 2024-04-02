@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import MainImage from '../images/main.webp'
+import Collapse from '@/components/Collapse/Collapse'
 
 const DesktopApp = dynamic(
   () => import('@/components/pages/home/DesktopApp')
@@ -13,6 +14,14 @@ const BrowserExtensions = dynamic(
 const WebDockerManual = dynamic(
   () => import('@/components/pages/home/WebDockerManual')
 )
+
+const comparison = [
+  { name: 'Elasticvue desktop', autoUpdate: '✓', untrustedSsl: '✓', noConfigRequired: 'No config required' },
+  { name: 'Browser extension', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'No config required' },
+  { name: 'Web app', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
+  { name: 'Docker image', autoUpdate: 'X', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
+  { name: 'Self-hosted', autoUpdate: 'X', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
+]
 
 export default function Home() {
   return (
@@ -57,7 +66,7 @@ export default function Home() {
       </section>
 
       <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="hidden h-12 w-full lg:block">
-        <polygon fill-opacity="0" points="0,0 100,0 0,100" />
+        <polygon fillOpacity="0" points="0,0 100,0 0,100" />
         <polygon points="0,100 100,100 100,0" className="fill-white dark:fill-dark" />
       </svg>
 
@@ -97,6 +106,45 @@ export default function Home() {
             </Link>{' '}
             for details on how to configure your cluster to use elasticvue.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-white pb-8 lg:pb-32 dark:bg-dark dark:text-white">
+        <div className="mx-auto w-[95%] max-w-[1344px] lg:w-[70%]">
+          <Collapse name="compare" title="Unsure? Compare variants">
+            <table className="table-auto w-full text-left">
+              <thead>
+                <tr>
+                  <th className="px-5 pb-2 pt-5 border-r-2 border-r-dark"></th>
+                  <th className="px-5 pb-2 pt-5 whitespace-nowrap">Auto update</th>
+                  <th className="px-5 pb-2 pt-5 whitespace-nowrap">Accepts self-signed SSL</th>
+                  <th className="px-5 pb-2 pt-5 whitespace-nowrap">Cluster configuration required</th>
+                </tr>
+                <tr className="border-b-2 border-b-dark italic text-sm">
+                  <td className="border-r-2 border-r-dark"></td>
+                  <td className="px-5 pt-2 pb-5">
+                    Some versions of elasticvue will automatically update themselves.
+                  </td>
+                  <td className="px-5 pt-2 pb-5">
+                    You can always connect to SSL protected clusters. <br />If you use a self-signed certificate you have to make sure that your browser accepts it.
+                  </td>
+                  <td className="px-5 pt-2 pb-5">
+                    For some variants you have to configure your cluster to enable CORS.
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.map(({ name, autoUpdate, untrustedSsl, noConfigRequired }) => (
+                  <tr key={name} className="hover:bg-dark">
+                    <th className="p-5 border-r-2 border-r-dark">{name}</th>
+                    <td className="p-5">{autoUpdate}</td>
+                    <td className="p-5">{untrustedSsl}</td>
+                    <td className="p-5">{noConfigRequired}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Collapse>
         </div>
       </section>
     </>
