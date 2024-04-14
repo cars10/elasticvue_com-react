@@ -8,7 +8,7 @@ export default function DesktopApp() {
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             icon={WindowsIcon}
             title="Windows app"
@@ -24,7 +24,7 @@ export default function DesktopApp() {
           </Card>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             icon={AppleIcon}
             title="MacOS app"
@@ -40,7 +40,7 @@ export default function DesktopApp() {
           </Card>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             icon={LinuxIcon}
             title="Linux app"

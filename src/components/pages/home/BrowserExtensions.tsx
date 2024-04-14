@@ -8,7 +8,7 @@ export default function BrowserExtensions() {
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             icon={ChromeIcon}
             title="Chrome extension"
@@ -24,7 +24,7 @@ export default function BrowserExtensions() {
           </Card>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             icon={EdgeIcon}
             title="Edge extension"
@@ -40,7 +40,7 @@ export default function BrowserExtensions() {
           </Card>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             icon={FirefoxIcon}
             title="Firefox addon"

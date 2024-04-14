@@ -8,7 +8,7 @@ export default function WebDockerManual() {
   return (
     <>
       <div className="mb-8 flex flex-col lg:mb-16 lg:flex-row">
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card
             title="Web app"
             link={{
@@ -23,7 +23,7 @@ export default function WebDockerManual() {
           </Card>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card icon={DockerIcon} title="Docker image" downloads="350k+">
             <p className="mb-3">
               Download and run{' '}
@@ -55,7 +55,7 @@ export default function WebDockerManual() {
           </Card>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4">
+        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
           <Card title="Building manually" icon={GithubIcon}>
             <p className="mb-1">
               Check the{' '}
