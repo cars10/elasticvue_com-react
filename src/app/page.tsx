@@ -16,8 +16,8 @@ const WebDockerManual = dynamic(
 )
 
 const comparison = [
-  { name: 'Elasticvue desktop', autoUpdate: '✓', untrustedSsl: '✓', noConfigRequired: 'No config required' },
-  { name: 'Browser extension', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'No config required' },
+  { name: 'Elasticvue desktop', autoUpdate: '✓', untrustedSsl: '✓', noConfigRequired: 'No' },
+  { name: 'Browser extension', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'No' },
   { name: 'Web app', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
   { name: 'Docker image', autoUpdate: 'X', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
   { name: 'Self-hosted', autoUpdate: 'X', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
