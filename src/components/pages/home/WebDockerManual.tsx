@@ -2,7 +2,7 @@ import Card from '@/components/Card'
 
 import DockerIcon from '@/images/icons/docker.svg'
 import GithubIcon from '@/images/icons/github.svg'
-import Code from '@/components/Code/Code'
+import Code from '@/components/shared/Code/Code'
 
 export default function WebDockerManual() {
   return (

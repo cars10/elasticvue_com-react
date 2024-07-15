@@ -1,7 +1,7 @@
 export default function privacy() {
   return (
     <>
-      <section className="mx-auto mb-16 w-[92%] max-w-[1344px] text-white lg:w-[70%]">
+      <section className="mx-auto mb-16 w-[92%] max-w-[1640px] text-white lg:w-[80%]">
         <div className="my-4">
           <h1 className="mb-4 text-3xl font-bold">Privacy Policy</h1>
           <p>Effective date: February 25, 2019</p>

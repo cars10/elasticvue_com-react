@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <section className="lg:mb-none mb-4 py-4 lg:py-24">
-        <div className="mx-auto w-[92%] max-w-[1344px] text-white lg:w-[70%]">
+        <div className="mx-auto w-[92%] max-w-[1640px] text-white lg:w-[80%]">
           <div className="text-center">
             <h1 className="mb-8 text-4xl">Elasticvue features</h1>
             <p>See elasticvue in action.</p>

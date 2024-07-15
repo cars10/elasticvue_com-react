@@ -1,5 +1,5 @@
-import Collapse from '@/components/Collapse/Collapse'
-import Code from '@/components/Code/Code'
+import Collapse from '@/components/shared/Collapse/Collapse'
+import Code from '@/components/shared/Code/Code'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <section className="lg:mb-none mb-4 py-4 lg:py-24">
-        <div className="mx-auto w-[92%] max-w-[1344px] text-white lg:w-[70%]">
+        <div className="mx-auto w-[92%] max-w-[1640px] text-white lg:w-[80%]">
           <div className="text-center">
             <h1 className="mb-8 text-4xl">Elasticvue usage</h1>
             <p>
@@ -29,7 +29,7 @@ export default function Page() {
       </svg>
 
       <section className="lg:mb-none bg-white py-4 lg:py-32 dark:bg-dark dark:text-white">
-        <div className="mx-auto mb-20 w-[92%] max-w-[1344px] lg:w-[70%]">
+        <div className="mx-auto mb-20 w-[92%] max-w-[1640px] lg:w-[80%]">
           <h2 className="mb-4 text-3xl font-bold">Cluster configuration</h2>
 
           <div className="mb-8 text-justify leading-normal lg:text-left">
@@ -128,7 +128,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="mx-auto mb-20 w-[92%] max-w-[1344px] lg:w-[70%]">
+        <div className="mx-auto mb-20 w-[92%] max-w-[1640px] lg:w-[80%]">
           <h2 className="mb-4 text-3xl font-bold">
             Running elasticsearch in docker
           </h2>
@@ -153,7 +153,7 @@ export default function Page() {
            docker.elastic.co/elasticsearch/elasticsearch:8.12.2`}</Code>
         </div>
 
-        <div className="mx-auto w-[92%] max-w-[1344px] lg:w-[70%]">
+        <div className="mx-auto w-[92%] max-w-[1640px] lg:w-[80%]">
           <h2 className="mb-4 text-3xl font-bold">Need help?</h2>
 
           <div className="leading-normal">

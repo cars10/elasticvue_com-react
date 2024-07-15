@@ -1,59 +1,40 @@
-import Card from '@/components/Card'
+import Image from 'next/image'
 
-import WindowsIcon from '@/images/icons/windows.svg'
-import AppleIcon from '@/images/icons/apple.svg'
-import LinuxIcon from '@/images/icons/linux.svg'
+import Desktop from '@/images/desktop.png'
+import DesktopAppDownload from './DesktopApp/Download'
+
+// 1600px x 1000px
 
 export default function DesktopApp() {
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
-          <Card
-            icon={WindowsIcon}
-            title="Windows app"
-            link={{
-              href: 'https://update.elasticvue.com/download/windows/x86_64',
-              text: 'Download msi'
-            }}
-            badge={true}
-          >
-            <p className="mb-1">
-              Elasticvue is available on windows:
+        <div className="mx-none lg:mb-none mb-4 w-2/5 lg:mx-12 flex flex-col justify-center">
+          <div>
+            <h2 className="text-xl lg:text-3xl font-medium">
+              Elasticvue desktop
+            </h2>
+
+            <div className="bg-green-700 rounded-sm h-1 w-24 my-10"></div>
+
+            <p className="text-gray-400">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>
-          </Card>
+
+            <div className="mt-10">
+              <DesktopAppDownload />
+            </div>
+          </div>
         </div>
 
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
-          <Card
-            icon={AppleIcon}
-            title="MacOS app"
-            links={[
-              { href: 'https://update.elasticvue.com/download/darwin/x86_64', text: 'x86_64 dmg' }, 
-              { href: 'https://update.elasticvue.com/download/darwin/aarch64', text: 'aarch64 dmg' }
-            ]}
-            badge={true}
-          >
-            <p className="mb-1">
-              Elasticvue is available for macos:
-            </p>
-          </Card>
-        </div>
-
-        <div className="mx-none lg:mb-none mb-4 w-full lg:mx-4 grow shrink basis-0 w-0">
-          <Card
-            icon={LinuxIcon}
-            title="Linux app"
-            link={{
-              href: 'https://update.elasticvue.com/download/linux/x86_64',
-              text: 'Download AppImage'
-            }}
-            badge={true}
-          >
-            <p className="mb-1">
-              Elasticvue is available for linux:
-            </p>
-          </Card>
+        <div className="mx-none lg:mb-none mb-4 w-3/5 lg:mx-12">
+          <Image
+            alt="Screenshot"
+            className="rounded shadow-md"
+            src={Desktop}
+            sizes="(min-width: 1344px) 80vw, 100vw"
+            quality={100}
+          />
         </div>
       </div>
     </>

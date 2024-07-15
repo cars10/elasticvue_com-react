@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <>
       <header className="h-16 py-3 text-white lg:h-24">
-        <div className="mx-auto flex h-full w-[92%] max-w-[1344px] flex-1 flex-row justify-between lg:w-[70%]">
+        <div className="mx-auto flex h-full w-[92%] max-w-[1640px] flex-1 flex-row justify-between lg:w-[80%]">
           <div className="h-100 flex flex-1 items-center">
             <Link href="/" className="mr-3">
               <Image

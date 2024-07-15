@@ -33,7 +33,7 @@ export default function Showcase({
       <section
         className={`${reverse ? 'bg-primary text-white' : 'bg-white dark:bg-dark dark:text-white'} lg:mb-none py-4 lg:py-28`}
       >
-        <div className="mx-auto w-[92%] max-w-[1344px] lg:w-[70%]">
+        <div className="mx-auto w-[92%] max-w-[1640px] lg:w-[80%]">
           <div
             className={`flex w-full flex-col gap-10 ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
           >

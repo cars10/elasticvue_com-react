@@ -6,13 +6,13 @@ import MainImage from '../images/main.webp'
 import Collapse from '@/components/Collapse/Collapse'
 
 const DesktopApp = dynamic(
-  () => import('@/components/pages/home/DesktopApp')
+  () => import('@/components/pages/Home/DesktopApp')
 )
 const BrowserExtensions = dynamic(
-  () => import('@/components/pages/home/BrowserExtensions')
+  () => import('@/components/pages/Home/BrowserExtensions')
 )
 const WebDockerManual = dynamic(
-  () => import('@/components/pages/home/WebDockerManual')
+  () => import('@/components/pages/Home/WebDockerManual')
 )
 
 const comparison = [
@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       <section className="lg:mb-none mb-4 py-4 lg:py-32">
-        <div className="mx-auto w-[92%] max-w-[1344px] text-white lg:w-[70%]">
+        <div className="mx-auto w-[92%] max-w-[1640px] text-white lg:w-[80%]">
           <div className="flex flex-1 flex-col lg:flex-row">
             <div className="lg:mb-none mb-8 w-full lg:w-1/2">
               <h1 className="mb-8 border-l-[3px] px-2 py-2 text-lg leading-tight lg:mb-16 lg:mt-4 lg:border-l-4 lg:px-5 lg:py-3 lg:text-3xl">
@@ -65,17 +65,12 @@ export default function Home() {
         </div>
       </section>
 
-      <svg preserveAspectRatio="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="hidden h-12 w-full lg:block">
-        <polygon fillOpacity="0" points="0,0 100,0 0,100" />
-        <polygon points="0,100 100,100 100,0" className="fill-white dark:fill-dark" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" style={{marginBottom: '-1px'}}>
+        <path className="fill-white dark:fill-dark" fillOpacity="1" d="M0,100L60,106.7C120,113,240,127,360,140C480,153,600,167,720,150C840,133,960,87,1080,73.3C1200,60,1320,80,1380,90L1440,100L1440,200L1380,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"></path>
       </svg>
 
       <section className="bg-white py-8 lg:py-32 dark:bg-dark dark:text-white">
-        <div className="mx-auto w-[95%] max-w-[1344px] lg:w-[70%]">
-          <h2 className="mb-6 text-center text-xl lg:text-3xl lg:mb-16">
-            Get elasticvue desktop ...
-          </h2>
-
+        <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%]">
           <DesktopApp />
 
           <h2 className="my-6 text-center text-xl lg:text-3xl lg:my-16">
