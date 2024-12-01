@@ -3,13 +3,13 @@ import LinuxIcon from '@/images/icons/linux.svg'
 
 export default function DownloadLinux() {
   return (
-    <>
-      <Button
-        image={LinuxIcon}
-        link={{
-          href: 'https://update.elasticvue.com/download/linux/x86_64',
-          text: 'Download for linux'
-        }} />
-    </>
+    <Button
+      image={LinuxIcon}
+      link={{
+        href: 'https://update.elasticvue.com/download/linux/x86_64',
+        text: 'Linux'
+      }}
+      full
+      center />
   )
 }

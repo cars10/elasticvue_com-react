@@ -4,8 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
-import Logo from '@/images/logo/white_104.webp'
-import externalLinkSvg from '@/images/icons/external.svg'
+import Logo from '@/images/logo/blue_96.png'
 import OctoCat from '@/components/layout/Header/Octocat/Octocat'
 import { useState } from 'react'
 
@@ -15,13 +14,13 @@ const links = [
   { label: 'features', attributes: { href: '/features' } },
   {
     label: 'code',
+    classNames: 'bg-white text-primary shadow-sm',
     attributes: {
       href: 'https://github.com/cars10/elasticvue',
       rel: 'noopened',
       target: '_blank',
       prefetch: false
-    },
-    external: true
+    }
   }
 ]
 
@@ -31,8 +30,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-16 py-3 text-white lg:h-24">
-        <div className="mx-auto flex h-full w-[92%] max-w-[1640px] flex-1 flex-row justify-between lg:w-[80%]">
+      <header className="py-4 text-white flex absolute w-full top-0">
+        <div className="mx-auto flex h-full max-w-[92%] lg:max-w-[50%] flex-1 flex-row justify-between py-4">
           <div className="h-100 flex flex-1 items-center">
             <Link href="/" className="mr-3">
               <Image
@@ -40,14 +39,8 @@ export default function Header() {
                 width={52}
                 src={Logo}
                 priority
-                className="w-9 lg:w-[52px]"
+                className="w-9 lg:w-[52px] bg-white shadow-primary shadow-sm hover:shadow-xl rounded-xl p-1"
               />
-            </Link>
-            <Link
-              href="/"
-              className="mt-1 text-2xl leading-none text-white visited:text-white lg:mt-0 lg:text-3xl"
-            >
-              <span className="linkUnderlineHover">elasticvue</span>
             </Link>
           </div>
 
@@ -55,23 +48,12 @@ export default function Header() {
             className={`${menuOpen ? 'absolute left-0 top-16 flex w-full flex-col items-start gap-4 bg-primary py-4 shadow-main' : 'mr-14 hidden py-3 lg:mr-0 lg:flex'}`}
             onClick={() => setMenuOpen(false)}
           >
-            {links.map(({ label, attributes, external }, index) => (
+            {links.map(({ label, classNames, attributes }, index) => (
               <Link
                 key={index}
-                className={`linkUnderlineHover ml-4 inline-block h-8 px-3 py-1 text-xl leading-none text-white visited:text-white lg:ml-10 ${pathname === attributes.href ? 'active' : ''}`}
+                className={`ml-4 inline-block h-8 px-3 pb-1 pt-1.5 text-lg leading-none lg:ml-10 hover:bg-white hover:text-primary hover:shadow-xl rounded-xl ${pathname === attributes.href ? 'active' : ''} ${classNames || ''}`}
                 {...attributes}
-              >
-                {external && (
-                  <Image
-                    src={externalLinkSvg}
-                    alt=">"
-                    className="mr-2 inline-block"
-                    width="14"
-                  />
-                )}
-
-                {label}
-              </Link>
+              >{label}</Link>
             ))}
           </div>
 

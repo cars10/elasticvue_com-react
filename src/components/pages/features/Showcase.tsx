@@ -51,7 +51,7 @@ export default function Showcase({
                 src={src}
                 alt={title}
                 priority={priority}
-                sizes="(min-width: 1344px) 40vw, 100vw"
+                sizes="(min-width: 1200px) 40vw, 100vw"
                 className="rounded shadow-main hover:shadow-main-ele"
               />
             </div>

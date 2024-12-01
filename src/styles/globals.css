@@ -23,12 +23,7 @@ body {
   color: var(--default-text-color);
   font-size: var(--font-size);
   background: hsl(226, 42%, 25%);
-  background: linear-gradient(
-    90deg,
-    rgba(22, 30, 54, 1) 0%,
-    rgba(37, 49, 90, 1) 50%,
-    rgba(52, 71, 127, 1) 100%
-  );
+  background: hsl(0 0% 11% / 1);
   font-family: var(--system-font);
   line-height: 1;
 }

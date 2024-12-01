@@ -1,26 +1,32 @@
 import Image from 'next/image'
+import ButtonWrapper from './ButtonWrapper'
 
 type Props = {
-  image: string
+  image?: string
   link: { href: string, text: string }
+  full?: boolean
+  center?: boolean
 }
 
-export default function Button({ link, image }: Props) {
+export default function Button({ center, link, image, full }: Props) {
   return (
     <>
-      <a
-        className="mb-2 mt-3 mx-1 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light dark:bg-primary-intense"
-        href={link.href}
-        rel="noopener"
-        target="_blank"
-      >
-        <Image
-          src={image}
-          alt="Logo"
-          width="14"
-          className="mb-1 mr-2 inline-block"
-        /> {link.text}
-      </a>
+      <ButtonWrapper full={full}>
+        <a
+          className={`${center ? 'justify-center' : ''} rounded bg-primary px-4 py-2 text-white shadow visited:text-white hover:bg-primary-light dark:bg-primary-intense h-10 flex items-center`}
+          href={link.href}
+          rel="noopener"
+          target="_blank"
+        >
+          {image && <Image
+            src={image}
+            alt="Logo"
+            width="14"
+            className="mr-2 inline-block"
+          />}
+          {link.text}
+        </a>
+      </ButtonWrapper>
     </>
   )
 }

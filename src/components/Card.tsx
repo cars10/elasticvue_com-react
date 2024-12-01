@@ -5,6 +5,7 @@ import externalLink from '@/images/icons/external.svg'
 import DownloadIcon from '@/images/icons/download.svg'
 
 import Rating from './Rating'
+import Button from './shared/Button/Button'
 
 type Props = {
   icon?: string
@@ -66,33 +67,12 @@ export default function Card({
         <div className="p-3">
           {children}
 
-          {link && (<Button link={link} />)}
+          {link && (<Button link={link} image={externalLink} />)}
           <div className="flex flex-col lg:flex-row justify-evenly">
-            {links && links.map((link, index) => (<Button link={link} key={index} />))}
+            {links && links.map((link, index) => (<Button link={link} image={externalLink} key={index} />))}
           </div>
         </div>
       </div>
-    </>
-  )
-}
-
-const Button = ({ link }: { link: { href: string, text: string } }) => {
-  return (
-    <>
-      <a
-        className="mb-2 mt-3 mx-1 inline-block rounded bg-primary px-4 py-3 text-white shadow visited:text-white hover:bg-primary-light dark:bg-primary-intense"
-        href={link.href}
-        rel="noopener"
-        target="_blank"
-      >
-        <Image
-          src={externalLink}
-          alt=">"
-          width="14"
-          className="mb-1 mr-2 inline-block"
-        />{' '}
-        <span className="inline-block">{link.text}</span>
-      </a>
     </>
   )
 }

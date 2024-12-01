@@ -15,12 +15,12 @@ export const sortedOs = (priorityOs: Os | undefined) => {
   return arrayPriority<Os>(priorityOs, Object.values(Os))
 }
 
-export const arrayPriority = <T>(priority: T | undefined, values: T[]) => {
+export const arrayPriority = <T>(priority: T | undefined, values: NonNullable<T>[]) => {
   if (!priority) return values
 
   if (values.includes(priority)) {
     const index = values.indexOf(priority)
-    if (index) values.splice(index, 1)
+    if (index > -1) values.splice(index, 1)
     return [priority].concat(values)
   } else {
     return values

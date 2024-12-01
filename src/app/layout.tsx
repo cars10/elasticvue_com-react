@@ -32,8 +32,8 @@ export default function RootLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="flex h-full flex-col">
+    <html lang="en">
+      <body>
         <Script
           async
           src="https://umami.cars10k.de/script.js"
@@ -48,8 +48,12 @@ export default function RootLayout({
           />
         </Head>
         <Header />
+
         <main>{children}</main>
-        <Footer />
+
+        <Footer style={{ flex: '0 1 40px' }} />
+
+        {/* <main>{children}</main> */}
       </body>
     </html>
   )
