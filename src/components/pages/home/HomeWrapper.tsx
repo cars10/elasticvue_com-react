@@ -1,31 +1,40 @@
 import Image, { StaticImageData } from 'next/image'
 
 type Props = {
-  title: string,
+  title: string
   description: string
-  image: StaticImageData,
-  reverse?: boolean,
+  capabilities: string[]
+  image: StaticImageData
+  reverse?: boolean
   children?: React.ReactNode | React.ReactNode[]
 }
 
-export default function HomeWrapper({title, description, image, reverse, children}: Props) {
+export default function HomeWrapper({ title, description, capabilities, image, reverse, children }: Props) {
   return (
     <>
       <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
-        <div className="mx-none lg:mb-none mb-4 lg:w-2/5 lg:mx-12 flex flex-col justify-center">
+        <div className="lg:w-2/5 lg:mx-12 flex flex-col justify-center">
           <div>
-            <h2 className="text-xl lg:text-3xl font-medium">
-              { title }
+            <h2 className="text-xl lg:text-3xl font-medium mb-2">
+              {title}
             </h2>
+
+            {capabilities &&
+              <div className="text-gray-400 text-sm">
+                {capabilities.map(capability =>
+                  <span className="mr-3">✓ {capability}</span>
+                )}
+              </div>
+            }
 
             <div className="bg-green-700 rounded-sm h-1 w-24 my-10"></div>
 
-            <p className="text-gray-400">
-              { description }
+            <p className="">
+              {description}
             </p>
 
             <div className="mt-10 flex justify-around">
-              { children }
+              {children}
             </div>
           </div>
         </div>

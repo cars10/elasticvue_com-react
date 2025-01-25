@@ -1,14 +1,18 @@
-import Desktop from '@/images/desktop.png'
+import homeImg from '@/images/website-1-home.png'
+
 import DesktopAppDownload from './DesktopApp/Download'
 import HomeWrapper from './HomeWrapper'
 
-// 1600px x 1000px
-
 export default function DesktopApp() {
-  const description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+  const description = 'The desktop app is the recommended and easiest way to use elasticvue. Download the installer for your operating system to get started.'
+  const capabilities = [
+    'auto update',
+    'self-signed ssl support',
+    'no cluster configuration required'
+  ]
 
   return (
-    <HomeWrapper title="Elasticvue desktop" description={description} image={Desktop}>
+    <HomeWrapper title="Elasticvue desktop" image={homeImg} description={description} capabilities={capabilities}>
       <DesktopAppDownload />
     </HomeWrapper>
   )
