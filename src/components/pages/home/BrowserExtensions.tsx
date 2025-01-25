@@ -6,7 +6,7 @@ import Desktop from '@/images/desktop.png'
 import Button from '@/components/shared/Button/Button'
 
 export default function BrowserExtensions() {
-  const description = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+  const description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 
   return (
     <HomeWrapper title="Elasticvue browser extension" description={description} image={Desktop} reverse>

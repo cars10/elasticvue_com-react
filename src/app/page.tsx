@@ -49,21 +49,21 @@ export default function Home() {
             <code>
               {
                 JSON.stringify({
-                  "name": "es-8-node-1",
-                  "cluster_name": "es-8",
-                  "version": {
-                    "number": "8.14.3",
-                    "build_flavor": "default",
-                    "build_type": "docker",
-                    "build_hash": "d55f984299e0e88dee72ebd8255f7ff130859ad0",
-                    "build_date": "2024-07-07T22:04:49.882652950Z",
-                    "build_snapshot": false,
-                    "lucene_version": "9.10.0",
-                    "minimum_wire_compatibility_version": "7.17.0",
-                    "minimum_index_compatibility_version": "7.0.0"
+                  'name': 'es-8-node-1',
+                  'cluster_name': 'es-8',
+                  'version': {
+                    'number': '8.14.3',
+                    'build_flavor': 'default',
+                    'build_type': 'docker',
+                    'build_hash': 'd55f984299e0e88dee72ebd8255f7ff130859ad0',
+                    'build_date': '2024-07-07T22:04:49.882652950Z',
+                    'build_snapshot': false,
+                    'lucene_version': '9.10.0',
+                    'minimum_wire_compatibility_version': '7.17.0',
+                    'minimum_index_compatibility_version': '7.0.0'
                   },
-                  "cluster_uuid": "VEorXXBaRjO_O56q8VnvxQ",
-                  "tagline": "You Know, for Search"
+                  'cluster_uuid': 'VEorXXBaRjO_O56q8VnvxQ',
+                  'tagline': 'You Know, for Search'
                 }, null, '\t')
               }
             </code>
