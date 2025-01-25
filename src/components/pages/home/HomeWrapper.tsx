@@ -22,7 +22,7 @@ export default function HomeWrapper({ title, description, capabilities, image, r
             {capabilities &&
               <div className="text-gray-400 text-sm">
                 {capabilities.map(capability =>
-                  <span className="mr-3">✓ {capability}</span>
+                  <span className="mr-3" key={capability}>✓ {capability}</span>
                 )}
               </div>
             }
