@@ -32,7 +32,7 @@ export default function Header() {
     <>
       <header className="py-4 text-white flex absolute w-full top-0">
         <div className="mx-auto flex h-full max-w-[92%] lg:max-w-[50%] flex-1 flex-row justify-between py-4">
-          <div className="h-100 flex flex-1 items-center">
+          <div className="flex flex-1 items-center">
             <Link href="/" className="mr-3">
               <Image
                 alt="Elasticvue logo"
