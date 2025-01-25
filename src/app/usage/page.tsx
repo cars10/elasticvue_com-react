@@ -36,7 +36,7 @@ export default function Page() {
             You have to enable CORS if you use elasticvue via docker or the web
             app, otherwise the browser will reject all requests. <br />
             Edit your config file (usually{' '}
-            <span className="py-05 rounded bg-gray-200 px-2 font-mono text-sm dark:bg-secondary">
+            <span className="py-05 rounded-sm bg-gray-200 px-2 font-mono text-sm dark:bg-secondary">
               elasticsearch.yml
             </span>
             ) and enable CORS based on how you run elasticvue:
@@ -106,7 +106,7 @@ export default function Page() {
               </p>
               <p className="mb-4">
                 For example if it is running on{' '}
-                <span className="py-05 rounded bg-gray-200 px-2 font-mono text-sm dark:bg-secondary">
+                <span className="py-05 rounded-sm bg-gray-200 px-2 font-mono text-sm dark:bg-secondary">
                   http://localhost:8080
                 </span>
               </p>
@@ -136,7 +136,7 @@ export default function Page() {
           <div className="mb-8 text-justify leading-normal lg:text-left">
             If your elasticsearch cluster is running inside docker then you
             probably do not use the
-            <span className="py-05 rounded bg-gray-200 px-2 font-mono text-sm dark:bg-secondary">
+            <span className="py-05 rounded-sm bg-gray-200 px-2 font-mono text-sm dark:bg-secondary">
               elasticsearch.yml
             </span>{' '}
             config file.

@@ -31,7 +31,7 @@ export default function DropdownButton({ full, center, links, title, image }: Pr
       <>
         <button
           onClick={toggle}
-          className={`rounded-t ${!open ? 'rounded-b' : ''} ${full ? 'w-full' : ''} ${center ? 'justify-center' : ''} bg-primary px-3 py-2 text-white shadow hover:bg-primary-light dark:bg-primary-intense h-10 flex items-center`}
+          className={`rounded-t ${!open ? 'rounded-b' : ''} ${full ? 'w-full' : ''} ${center ? 'justify-center' : ''} bg-primary px-3 py-2 text-white shadow-sm hover:bg-primary-light dark:bg-primary-intense h-10 flex items-center`}
           role="button"
           rel="noopener"
         >

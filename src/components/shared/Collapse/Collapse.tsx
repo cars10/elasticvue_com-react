@@ -20,7 +20,7 @@ export default function Collapse({
 
   return (
     <>
-      <div className="rounded border-t border-[#ededed] shadow-main transition-shadow duration-200 ease-in hover:shadow-main-ele dark:border-none dark:bg-secondary">
+      <div className="rounded-sm border-t border-[#ededed] shadow-main transition-shadow duration-200 ease-in hover:shadow-main-ele dark:border-none dark:bg-secondary">
         <input
           type="checkbox"
           aria-hidden="true"

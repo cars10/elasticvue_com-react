@@ -13,7 +13,7 @@ export default function Button({ center, link, image, full }: Props) {
     <>
       <ButtonWrapper full={full}>
         <a
-          className={`${center ? 'justify-center' : ''} rounded bg-primary px-4 py-2 text-white shadow visited:text-white hover:bg-primary-light dark:bg-primary-intense h-10 flex items-center`}
+          className={`${center ? 'justify-center' : ''} rounded-sm bg-primary px-4 py-2 text-white shadow-sm visited:text-white hover:bg-primary-light dark:bg-primary-intense h-10 flex items-center`}
           href={link.href}
           rel="noopener"
           target="_blank"

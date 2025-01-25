@@ -30,7 +30,7 @@ export default function Card({
 }: Props) {
   return (
     <>
-      <div className="relative h-full overflow-hidden rounded border-t border-[#ededed] p-3 text-center shadow-main transition-shadow duration-200 ease-in hover:shadow-main-ele dark:bg-secondary dark:border-none">
+      <div className="relative h-full overflow-hidden rounded-sm border-t border-[#ededed] p-3 text-center shadow-main transition-shadow duration-200 ease-in hover:shadow-main-ele dark:bg-secondary dark:border-none">
         {badge && (
           <div className="absolute -right-9 top-8 w-40 rotate-45 bg-[#358639] py-1 text-xs font-bold text-white">
             <strong>recommended</strong>

@@ -14,7 +14,7 @@ const links = [
   { label: 'features', attributes: { href: '/features' } },
   {
     label: 'code',
-    classNames: 'bg-white text-primary shadow-sm',
+    classNames: 'bg-white text-primary shadow-xs',
     attributes: {
       href: 'https://github.com/cars10/elasticvue',
       rel: 'noopened',
@@ -39,7 +39,7 @@ export default function Header() {
                 width={52}
                 src={Logo}
                 priority
-                className="w-9 lg:w-[52px] bg-white shadow-primary shadow-sm hover:shadow-xl rounded-xl p-1"
+                className="w-9 lg:w-[52px] bg-white shadow-primary shadow-xs hover:shadow-xl rounded-xl p-1"
               />
             </Link>
           </div>
@@ -62,9 +62,9 @@ export default function Header() {
             className="mr-1 p-2 lg:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <div className="mb-1 h-1 w-7 rounded bg-white"></div>
-            <div className="mb-1 h-1 w-7 rounded bg-white"></div>
-            <div className="h-1 w-7 rounded bg-white"></div>
+            <div className="mb-1 h-1 w-7 rounded-sm bg-white"></div>
+            <div className="mb-1 h-1 w-7 rounded-sm bg-white"></div>
+            <div className="h-1 w-7 rounded-sm bg-white"></div>
           </button>
         </div>
 

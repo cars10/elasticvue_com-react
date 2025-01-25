@@ -27,7 +27,7 @@ export default function HomeWrapper({ title, description, capabilities, image, r
               </div>
             }
 
-            <div className="bg-green-700 rounded-sm h-1 w-24 my-10"></div>
+            <div className="bg-green-700 rounded-xs h-1 w-24 my-10"></div>
 
             <p className="">
               {description}

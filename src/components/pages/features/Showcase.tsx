@@ -52,7 +52,7 @@ export default function Showcase({
                 alt={title}
                 priority={priority}
                 sizes="(min-width: 1200px) 40vw, 100vw"
-                className="rounded shadow-main hover:shadow-main-ele"
+                className="rounded-sm shadow-main hover:shadow-main-ele"
               />
             </div>
 
@@ -65,7 +65,7 @@ export default function Showcase({
                 alt={title}
                 priority={priority}
                 quality={100}
-                className="mx-auto rounded shadow-main hover:shadow-main-ele"
+                className="mx-auto rounded-sm shadow-main hover:shadow-main-ele"
               />
             </div>
           </div>
