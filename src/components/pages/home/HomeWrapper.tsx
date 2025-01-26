@@ -22,7 +22,7 @@ export default function HomeWrapper({ title, description, capabilities, image, r
             {capabilities &&
               <div className="text-gray-400 text-sm">
                 {capabilities.map(capability =>
-                  <span className="mr-3" key={capability}>✓ {capability}</span>
+                  <span className="mr-3 text-nowrap" key={capability}>✓ {capability}</span>
                 )}
               </div>
             }
@@ -43,6 +43,7 @@ export default function HomeWrapper({ title, description, capabilities, image, r
           <Image
             alt="Screenshot"
             src={image}
+            className="rounded-sm"
             sizes="(min-width: 1200px) 80vw, 100vw"
             quality={100}
           />

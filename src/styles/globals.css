@@ -65,3 +65,7 @@ p {
 .linkUnderlineHover.active:after {
   width: 100%;
 }
+
+.wavy-line {
+  border-bottom: 2px dashed var(--color-primary-intense)
+}

@@ -32,7 +32,7 @@ export default function Home() {
 
         <div className="z-10">
           <div className="max-w-[50%] mx-auto text-center mb-5">
-            <a href="#download" className="hover:bg-white hover:text-primary rounded-xl pl-4 pr-2 py-2">Download <span className="text-4xl ">&#8964;</span></a>
+            <a href="#download" className="hover:bg-white hover:text-primary rounded-xl pl-4 pr-2 py-2">Get elasticvue <span className="text-4xl ">&#8964;</span></a>
           </div>
 
           <Image
@@ -83,6 +83,8 @@ export default function Home() {
           <h2 className="my-6 text-center text-xl lg:text-3xl lg:my-16">
             ... or the elasticvue browser extension
           </h2>
+
+          <div className="wavy-line"></div>
 
           <BrowserExtensions />
 
