@@ -39,8 +39,8 @@ export default function Home() {
             src={pageImg}
             alt="main"
             priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, (max-width: 1920px) 75vw, 100vw"
-            className="w-1/2 mx-auto"
+            sizes="(max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 100vw"
+            className="lg:max-w-4/5 xl:max-w-2/3 2xl:max-w-1/2 mx-auto"
           />
         </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
         <path className="fill-white dark:fill-dark" fillOpacity="1" d="M0,100L60,106.7C120,113,240,127,360,140C480,153,600,167,720,150C840,133,960,87,1080,73.3C1200,60,1320,80,1380,90L1440,100L1440,200L1380,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"></path>
       </svg> */}
 
-      <section className="bg-white dark:bg-[#141a2b] dark:text-white shadow-lg" id="download">
+      <section className="bg-white dark:bg-[#121212] dark:text-white" id="download">
         <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%]">
           <DesktopApp />
 
