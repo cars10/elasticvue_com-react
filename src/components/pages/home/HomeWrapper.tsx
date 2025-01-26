@@ -12,7 +12,7 @@ type Props = {
 export default function HomeWrapper({ title, description, capabilities, image, reverse, children }: Props) {
   return (
     <>
-      <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+      <div className={`flex flex-col py-40 ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
         <div className="lg:w-2/5 lg:mx-12 flex flex-col justify-center">
           <div>
             <h2 className="text-xl lg:text-3xl font-medium mb-2">

@@ -6,7 +6,7 @@ export default function DownloadLinux() {
     <Button
       image={LinuxIcon}
       link={{
-        href: 'https://update.elasticvue.com/download/linux/x86_64',
+        href: 'https://update.elasticvue.com/download/linux/x86_64?file=elasticvue.AppImage',
         text: 'Linux'
       }}
       full

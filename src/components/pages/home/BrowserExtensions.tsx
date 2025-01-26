@@ -6,25 +6,28 @@ import Desktop from '@/images/desktop.png'
 import Button from '@/components/shared/Button/Button'
 
 export default function BrowserExtensions() {
-  const description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+  const description = 'If you\'d rather not download elasticvue desktop, you can use the browser extension instead. It\'s available in your favorite browser\'s extension store.'
   const capabilities = [
     'auto update',
     'no cluster configuration required'
   ]
 
   return (
-    <HomeWrapper title="Elasticvue browser extension" description={description} capabilities={capabilities} image={Desktop} reverse>
+    <HomeWrapper title="Browser extension" description={description} capabilities={capabilities} image={Desktop} reverse>
       <Button
         image={ChromeIcon}
         link={{ href: 'https://chrome.google.com/webstore/detail/elasticvue/hkedbapjpblbodpgbajblpnlpenaebaa', text: 'Google Chrome' }}
+        full
         center />
       <Button
         image={EdgeIcon}
         link={{ href: 'https://microsoftedge.microsoft.com/addons/detail/geifniocjfnfilcbeloeidajlfmhdlgo', text: 'Microsoft Edge' }}
+        full
         center />
       <Button
         image={FirefoxIcon}
         link={{ href: 'https://addons.mozilla.org/en-US/firefox/addon/elasticvue/', text: 'Mozilla Firefox' }}
+        full
         center />
     </HomeWrapper>
   )
