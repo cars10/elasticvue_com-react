@@ -1,4 +1,4 @@
-import homeImg from '@/images/website-1-home.png'
+import nodesImage from '@/images/screenshots/website-2-nodes.png'
 
 import DesktopAppDownload from './DesktopApp/Download'
 import HomeWrapper from './HomeWrapper'
@@ -12,7 +12,7 @@ export default function DesktopApp() {
   ]
 
   return (
-    <HomeWrapper title="Elasticvue desktop" image={homeImg} description={description} capabilities={capabilities}>
+    <HomeWrapper title="Elasticvue desktop" image={nodesImage} description={description} capabilities={capabilities}>
       <DesktopAppDownload />
     </HomeWrapper>
   )

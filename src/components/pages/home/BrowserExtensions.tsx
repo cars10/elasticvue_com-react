@@ -2,7 +2,7 @@ import ChromeIcon from '@/images/icons/chrome.svg'
 import EdgeIcon from '@/images/icons/edge.svg'
 import FirefoxIcon from '@/images/icons/firefox.svg'
 import HomeWrapper from './HomeWrapper'
-import Desktop from '@/images/desktop.png'
+import IndicesImage from '@/images/screenshots/website-4-indices.png'
 import Button from '@/components/shared/Button/Button'
 
 export default function BrowserExtensions() {
@@ -13,7 +13,7 @@ export default function BrowserExtensions() {
   ]
 
   return (
-    <HomeWrapper title="Browser extension" description={description} capabilities={capabilities} image={Desktop} reverse>
+    <HomeWrapper title="Browser extension" description={description} capabilities={capabilities} image={IndicesImage} reverse>
       <Button
         image={ChromeIcon}
         link={{ href: 'https://chrome.google.com/webstore/detail/elasticvue/hkedbapjpblbodpgbajblpnlpenaebaa', text: 'Google Chrome' }}

@@ -76,13 +76,15 @@ export default function Home() {
         <path className="fill-white dark:fill-dark" fillOpacity="1" d="M0,100L60,106.7C120,113,240,127,360,140C480,153,600,167,720,150C840,133,960,87,1080,73.3C1200,60,1320,80,1380,90L1440,100L1440,200L1380,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"></path>
       </svg> */}
 
-      <section className="bg-white dark:bg-[#121212] dark:text-white" id="download">
-        <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%]">
+      <section className="bg-white dark:bg-[#121212] dark:text-white relative" id="download">
+        <div id="honeycomb" className="absolute top-0 bottom-0 left-0 right-0"></div>
+
+        <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%] z-2 relative">
           <DesktopApp />
 
-          {/* <h2 className="my-6 text-center text-xl lg:text-3xl lg:my-16">
-            ... or the elasticvue browser extension
-          </h2> */}
+          <h2 className="text-center text-xl lg:text-3xl">
+            ... or ...
+          </h2> 
 
 
           <BrowserExtensions />
@@ -109,45 +111,6 @@ export default function Home() {
             </Link>{' '}
             for details on how to configure your cluster to use elasticvue.
           </p>
-        </div>
-      </section>
-
-      <section className="bg-white pb-8 lg:pb-32 dark:bg-dark dark:text-white">
-        <div className="mx-auto w-[95%] max-w-[1200px] lg:w-[70%]">
-          <Collapse name="compare" title="Unsure? Compare variants">
-            <table className="table-auto w-full text-left">
-              <thead>
-                <tr>
-                  <th className="px-5 pb-2 pt-5 border-r-2 border-r-dark"></th>
-                  <th className="px-5 pb-2 pt-5 whitespace-nowrap">Auto update</th>
-                  <th className="px-5 pb-2 pt-5 whitespace-nowrap">Accepts self-signed SSL</th>
-                  <th className="px-5 pb-2 pt-5 whitespace-nowrap">Cluster configuration required</th>
-                </tr>
-                <tr className="border-b-2 border-b-dark italic text-sm">
-                  <td className="border-r-2 border-r-dark"></td>
-                  <td className="px-5 pt-2 pb-5">
-                    Some versions of elasticvue will automatically update themselves.
-                  </td>
-                  <td className="px-5 pt-2 pb-5">
-                    You can always connect to SSL protected clusters. <br />If you use a self-signed certificate you have to make sure that your browser accepts it.
-                  </td>
-                  <td className="px-5 pt-2 pb-5">
-                    For some variants you have to configure your cluster to enable CORS.
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                {comparison.map(({ name, autoUpdate, untrustedSsl, noConfigRequired }) => (
-                  <tr key={name} className="hover:bg-dark">
-                    <th className="p-5 border-r-2 border-r-dark">{name}</th>
-                    <td className="p-5">{autoUpdate}</td>
-                    <td className="p-5">{untrustedSsl}</td>
-                    <td className="p-5">{noConfigRequired}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Collapse>
         </div>
       </section>
     </>
