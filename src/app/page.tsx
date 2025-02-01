@@ -1,32 +1,45 @@
-import dynamic from 'next/dynamic'
+import Button from '@/components/shared/Button/Button'
+import HomeImage from '@/images/home.png'
 import Image from 'next/image'
-import Link from 'next/link'
-
-import Collapse from '@/components/shared/Collapse/Collapse'
-import pageImg from '../images/scrn2.png'
-
-import { WordCarousel } from './wordCarousel'
-
-const DesktopApp = dynamic(() => import('@/components/pages/home/DesktopApp'))
-const BrowserExtensions = dynamic(() => import('@/components/pages/home/BrowserExtensions'))
-const WebDockerManual = dynamic(() => import('@/components/pages/home/WebDockerManual'))
-
-const comparison = [
-  { name: 'Elasticvue desktop', autoUpdate: '✓', untrustedSsl: '✓', noConfigRequired: 'No' },
-  { name: 'Browser extension', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'No' },
-  { name: 'Web app', autoUpdate: '✓', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
-  { name: 'Docker image', autoUpdate: 'X', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
-  { name: 'Self-hosted', autoUpdate: 'X', untrustedSsl: 'Depends on browsers acceptance', noConfigRequired: 'CORS setup needed' },
-]
 
 export default function Home() {
+  const titles = [
+    'The elasticsearch GUI that you\'ve been waiting for.',
+    'The elasticsearch GUI that you deserve.',
+    'The smartest way to work with elasticsearch.',
+    'The best way to manage your cluster.'
+  ]
+  const title = titles[Math.floor(Math.random() * titles.length)]
+
+  const wordlist = ['fastest', 'efficient', 'opensource', 'powerful', 'smartest', 'free', 'secure', 'prettiest']
+
   return (
     <>
-      <div className="text-white h-dvh flex flex-col justify-between" style={{ background: 'linear-gradient(0deg,#161e36,#25315a 50%,#34477f)' }}>
-        <div className="max-w-[50%] mx-auto text-center flex flex-col justify-between">
-          <div className="pt-40 mb-16">
-            <h1 className="text-6xl font-bold my-8">elasticvue</h1>
-            <h2 className="justify-center flex my-16">the <WordCarousel wordlist={['fastest', 'efficient', 'opensource', 'powerful', 'smartest', 'free', 'secure', 'prettiest']} /> gui for elasticsearch and opensearch</h2>
+      <div className="text-white h-dvh flex flex-col justify-between">
+        <div className="w-[50%] mx-auto flex flex-col justify-between">
+          <div className="pt-40 mb-16 w-4/5">
+            <h1 className="text-6xl font-bold mb-12 font-bold">
+              <span className="fade" style={{ animationDelay: 0.1 + 's' }}>Elasticvue.</span>
+            </h1>
+            <h1 className="text-5xl my-8 leading-18">
+              {title.split(' ').map((word, i) => (
+                <span key={i} className="fade" style={{ animationDelay: (i * 0.1) + 0.75 + 's' }}>{word}&nbsp;</span>
+              ))}
+            </h1>
+
+            <Button className="bg-white text-black inline-flex rounded-xl hover:bg-gray-300" link={{ text: "Get started", href: "/" }} />
+          </div>
+        </div>
+
+        <div className="imageWrapper">
+          <div></div>
+          <div className="imageBorder">
+            <Image
+              src={HomeImage}
+              alt="Home"
+              priority
+              className="rounded-xl"
+            />
           </div>
         </div>
 
@@ -34,85 +47,8 @@ export default function Home() {
           <div className="max-w-[50%] mx-auto text-center mb-5">
             <a href="#download" className="hover:bg-white hover:text-primary rounded-xl pl-4 pr-2 py-2">Get elasticvue <span className="text-4xl ">&#8964;</span></a>
           </div>
-
-          <Image
-            src={pageImg}
-            alt="main"
-            priority
-            sizes="(max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 100vw"
-            className="lg:max-w-4/5 xl:max-w-2/3 2xl:max-w-1/2 mx-auto"
-          />
-        </div>
-
-        <div style={{ position: 'absolute', top: '15%', left: '5%', transform: 'rotate(-8deg)', fontSize: '2.4em', opacity: '.04', userSelect: 'none', lineHeight: '1.3' }}>
-          <pre>
-            <code>
-              {
-                JSON.stringify({
-                  'name': 'es-8-node-1',
-                  'cluster_name': 'es-8',
-                  'version': {
-                    'number': '8.14.3',
-                    'build_flavor': 'default',
-                    'build_type': 'docker',
-                    'build_hash': 'd55f984299e0e88dee72ebd8255f7ff130859ad0',
-                    'build_date': '2024-07-07T22:04:49.882652950Z',
-                    'build_snapshot': false,
-                    'lucene_version': '9.10.0',
-                    'minimum_wire_compatibility_version': '7.17.0',
-                    'minimum_index_compatibility_version': '7.0.0'
-                  },
-                  'cluster_uuid': 'VEorXXBaRjO_O56q8VnvxQ',
-                  'tagline': 'You Know, for Search'
-                }, null, '\t')
-              }
-            </code>
-          </pre>
         </div>
       </div>
-
-      {/* 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" style={{ marginBottom: '-1px' }}>
-        <path className="fill-white dark:fill-dark" fillOpacity="1" d="M0,100L60,106.7C120,113,240,127,360,140C480,153,600,167,720,150C840,133,960,87,1080,73.3C1200,60,1320,80,1380,90L1440,100L1440,200L1380,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"></path>
-      </svg> */}
-
-      <section className="bg-white dark:bg-[#121212] dark:text-white relative" id="download">
-        <div id="honeycomb" className="absolute top-0 bottom-0 left-0 right-0"></div>
-
-        <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%] z-2 relative">
-          <DesktopApp />
-
-          <h2 className="text-center text-xl lg:text-3xl">
-            ... or ...
-          </h2> 
-
-
-          <BrowserExtensions />
-
-          <div className="my-8 lg:text-xl lg:my-16 text-center">
-            <p>
-              If you don&apos;t use the desktop app or a browser extension then you have to
-              configure CORS to grant the browser access to your cluster.
-              <br />
-              Elasticvue will guide you on how to configure your cluster when
-              you use it for the first time.
-            </p>
-          </div>
-
-          <WebDockerManual />
-
-          <p className="text-center">
-            Checkout{' '}
-            <Link
-              href="/usage"
-              className="text-primary underline visited:text-primary dark:text-white dark:visited:text-white"
-            >
-              usage
-            </Link>{' '}
-            for details on how to configure your cluster to use elasticvue.
-          </p>
-        </div>
-      </section>
     </>
   )
 }

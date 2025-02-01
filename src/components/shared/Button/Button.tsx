@@ -6,14 +6,15 @@ type Props = {
   link: { href: string, text: string }
   full?: boolean
   center?: boolean
+  className?: string
 }
 
-export default function Button({ center, link, image, full }: Props) {
+export default function Button({ center, link, image, full, className }: Props) {
   return (
     <>
       <ButtonWrapper full={full}>
         <a
-          className={`${center ? 'justify-center' : ''} text-nowrap rounded-sm bg-primary px-4 py-2 text-white shadow-sm visited:text-white hover:bg-primary-light dark:bg-primary-intense h-10 flex items-center`}
+          className={`${center ? 'justify-center' : ''} ${className ? className : ''} text-nowrap px-4 py-2 shadow-sm h-10 flex items-center`}
           href={link.href}
           rel="noopener"
           target="_blank"

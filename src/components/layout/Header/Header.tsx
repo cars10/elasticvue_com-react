@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="py-4 text-white flex absolute w-full top-0">
+      <header className="py-2 text-white flex absolute w-full top-0 border-b-1 border-[#454545]">
         <div className="mx-auto flex h-full max-w-[92%] lg:max-w-[50%] flex-1 flex-row justify-between py-4">
           <div className="flex flex-1 items-center">
             <Link href="/" className="mr-3">
@@ -51,7 +51,7 @@ export default function Header() {
             {links.map(({ label, classNames, attributes }, index) => (
               <Link
                 key={index}
-                className={`ml-4 inline-block h-8 px-3 pb-1 pt-1.5 text-lg leading-none lg:ml-10 hover:bg-white hover:text-primary hover:shadow-xl rounded-xl ${pathname === attributes.href ? 'active' : ''} ${classNames || ''}`}
+                className={`transition duration-200 ml-4 inline-block h-8 px-3 pb-1 pt-1.5 text-lg leading-none lg:ml-10 hover:bg-slate-800 hover:text-white hover:shadow-xl rounded-xl ${pathname === attributes.href ? 'active' : ''} ${classNames || ''}`}
                 {...attributes}
               >{label}</Link>
             ))}

@@ -6,6 +6,15 @@ import type React from 'react'
 import Script from 'next/script'
 import Head from 'next/head'
 
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap'
+})
+
+
 export const metadata: Metadata = {
   title: 'Elasticvue - Elasticsearch gui',
   keywords: 'elasticsearch, browser, gui, frontend, web ui',
@@ -33,7 +42,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <Script
           async
           src="https://umami.cars10k.de/script.js"
