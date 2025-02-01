@@ -1,0 +1,87 @@
+.heroWrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.heroWrapper:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, #08090a 90%) 100%;
+}
+
+.heroBorder {
+  width: 1600px;
+  height: 700px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  transform-style: preserve-3d;
+  border: 1px solid #454545;
+  outline: 1px solid transparent;
+  padding: 1px;
+  transform: scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  transform-origin: top left;
+  border-radius: 12px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 24px 24px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header header"
+    ". card1 card2 card3 card4 ."
+    ". card5 card5 card6 card6 ."
+}
+
+.heroGridHeader {
+  grid-area: header;
+}
+
+.heroGridCard1 {
+  grid-area: card1;
+}
+
+.heroGridCard2 {
+  grid-area: card2;
+}
+
+.heroGridCard3 {
+  grid-area: card3;
+}
+
+.heroGridCard4 {
+  grid-area: card4;
+}
+
+.heroGridCard5 {
+  grid-area: card5;
+}
+
+.heroGridCard6 {
+  grid-area: card6;
+}
+
+
+.fadeHeroImg {
+  animation: fade-img 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fade-img {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) translateY(200px);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateX(0) translateY(0);
+  }
+}
