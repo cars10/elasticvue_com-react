@@ -7,20 +7,19 @@ import { usePathname } from 'next/navigation'
 import Logo from '@/images/logo/blue_96.png'
 import OctoCat from '@/components/layout/Header/Octocat/Octocat'
 import { useState } from 'react'
+import Button, { ButtonColor } from '@/components/shared/Button/Button'
 
 const links = [
-  { label: 'home', attributes: { href: '/' } },
-  { label: 'usage', attributes: { href: '/usage' } },
-  { label: 'features', attributes: { href: '/features' } },
+  { label: 'home', href: '/' },
+  { label: 'usage', href: '/usage' },
+  { label: 'features', href: '/features' },
   {
     label: 'code',
-    classNames: 'bg-white text-primary shadow-xs',
-    attributes: {
-      href: 'https://github.com/cars10/elasticvue',
-      rel: 'noopened',
-      target: '_blank',
-      prefetch: false
-    }
+    color: 'white' as ButtonColor,
+    href: 'https://github.com/cars10/elasticvue',
+    rel: 'noopened',
+    target: '_blank',
+    prefetch: false
   }
 ]
 
@@ -30,7 +29,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="py-2 text-white flex absolute w-full top-0 border-b-1 border-[#454545]">
+      <header className="text-white flex w-full top-0 border-b-1 border-[#454545]">
         <div className="mx-auto flex h-full max-w-[92%] lg:max-w-[50%] flex-1 flex-row justify-between py-4">
           <div className="flex flex-1 items-center">
             <Link href="/" className="mr-3">
@@ -48,12 +47,8 @@ export default function Header() {
             className={`${menuOpen ? 'absolute left-0 top-16 flex w-full flex-col items-start gap-4 bg-primary py-4 shadow-main' : 'mr-14 hidden py-3 lg:mr-0 lg:flex'}`}
             onClick={() => setMenuOpen(false)}
           >
-            {links.map(({ label, classNames, attributes }, index) => (
-              <Link
-                key={index}
-                className={`transition duration-200 ml-4 inline-block h-8 px-3 pb-1 pt-1.5 text-lg leading-none lg:ml-10 hover:bg-slate-800 hover:text-white hover:shadow-xl rounded-xl ${pathname === attributes.href ? 'active' : ''} ${classNames || ''}`}
-                {...attributes}
-              >{label}</Link>
+            {links.map((attributes, index) => (
+              <Button key={index} {...attributes} className="ml-4" dense />
             ))}
           </div>
 
@@ -70,7 +65,7 @@ export default function Header() {
 
         <Link
           aria-label="Elasticvue on GitHub"
-          className="github-corner hidden lg:inline-block"
+          className="hidden lg:inline-block"
           href="https://github.com/cars10/elasticvue"
           rel="noopener"
           target="_blank"

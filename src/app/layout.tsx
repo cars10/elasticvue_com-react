@@ -60,9 +60,7 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        <Footer style={{ flex: '0 1 40px' }} />
-
-        {/* <main>{children}</main> */}
+        <Footer />
       </body>
     </html>
   )

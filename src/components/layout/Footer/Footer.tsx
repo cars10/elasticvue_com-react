@@ -2,12 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import GithubLogo from '@/images/github/github_logo.webp'
 
-export default function Footer({ style }: { style: any }) {
+export default function Footer() {
   const currentYear = new Date().getFullYear().toString()
 
   return (
     <>
-      <footer className="border-t-2 border-gray-200 bg-white py-8 dark:bg-primary dark:text-white dark:border-none" style={style}>
+      <footer className="border-t-2 border-gray-200 bg-white py-8 dark:bg-primary dark:text-white dark:border-none">
         <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%]">
           <div className="flex flex-1 flex-row justify-between">
             <div className="px-2">

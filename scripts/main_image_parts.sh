@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCREENSHOT_PATH=./scripts/main_image.png
-OUTPUT_DIR=./scripts/
+OUTPUT_DIR=./src/images/pages/home/
 
 
 FACTOR=2
