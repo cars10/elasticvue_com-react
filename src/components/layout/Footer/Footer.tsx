@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="border-t-2 border-gray-200 bg-white py-8 dark:bg-primary dark:text-white dark:border-none">
+      <footer className="border-t-1 border-[#454545] py-8">
         <div className="mx-auto w-[95%] max-w-[1640px] lg:w-[80%]">
           <div className="flex flex-1 flex-row justify-between">
             <div className="px-2">
@@ -45,7 +45,7 @@ export default function Footer() {
                   rel="noopener"
                   target="_blank"
                 >
-                  <Image alt="Github" src={GithubLogo} width="100" />
+                  <Image alt="Github" src={GithubLogo} width="100" className="bg-white rounded-xl" />
                 </a>
               </div>
             </div>
