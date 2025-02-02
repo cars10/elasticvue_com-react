@@ -7,6 +7,7 @@ type Props = React.HTMLAttributes<HTMLSpanElement> & {
   label?: string
   href?: string
   icon?: string
+  iconSize?: number
   full?: boolean
   center?: boolean
   dense?: boolean
@@ -14,7 +15,7 @@ type Props = React.HTMLAttributes<HTMLSpanElement> & {
   children?: React.ReactNode
 }
 
-export default function Button({ label, href, icon, full, center, dense, color, children, className, ...rest }: Props) {
+export default function Button({ label, href, icon, iconSize, full, center, dense, color, children, className, ...rest }: Props) {
   const defaulClasses = `text-nowrap px-4 py-2 shadow-sm flex items-center inline-flex rounded-xl cursor-pointer transition duration-300`
   const additionalClasses = {
     'justify-center': center,
@@ -46,7 +47,7 @@ export default function Button({ label, href, icon, full, center, dense, color, 
           {icon && <Image
             src={icon}
             alt="Logo"
-            width="14"
+            width={iconSize || '14'}
             className="mr-2 inline-block"
           />}
           {label && (

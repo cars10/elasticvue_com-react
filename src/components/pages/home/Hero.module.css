@@ -67,7 +67,6 @@
   grid-area: card6;
 }
 
-
 .fadeHeroImg {
   animation: fade-img 1s;
   animation-fill-mode: forwards;
@@ -83,5 +82,12 @@
   100% {
     opacity: 100;
     transform: translateX(0) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fadeHeroImg {
+    animation: none;
+    opacity: 1
   }
 }

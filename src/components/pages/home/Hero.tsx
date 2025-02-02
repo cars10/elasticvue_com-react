@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import HeaderImage from '@/images/pages/home/header.webp'
-import Card1Image from '@/images/pages/home/card1.webp'
-import Card2Image from '@/images/pages/home/card2.webp'
-import Card3Image from '@/images/pages/home/card3.webp'
-import Card4Image from '@/images/pages/home/card4.webp'
-import Card5Image from '@/images/pages/home/card5.webp'
-import Card6Image from '@/images/pages/home/card6.webp'
+import HeaderImage from '@/images/pages/home/hero/header.webp'
+import Card1Image from '@/images/pages/home/hero/card1.webp'
+import Card2Image from '@/images/pages/home/hero/card2.webp'
+import Card3Image from '@/images/pages/home/hero/card3.webp'
+import Card4Image from '@/images/pages/home/hero/card4.webp'
+import Card5Image from '@/images/pages/home/hero/card5.webp'
+import Card6Image from '@/images/pages/home/hero/card6.webp'
 
 import styles from './Hero.module.css'
 

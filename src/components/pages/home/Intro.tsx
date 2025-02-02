@@ -11,7 +11,7 @@ export default function Into() {
   const titleWords = title.split(' ')
 
   return (<>
-    <div className="w-[50%] mx-auto pt-20 z-2">
+    <div className="w-1/2 mx-auto pt-20">
       <div className="w-3/5">
         <h1 className="text-6xl font-bold mb-12 font-bold">
           <span className="fade" style={{ animationDelay: 0.1 + 's' }}>Elasticvue.</span>
