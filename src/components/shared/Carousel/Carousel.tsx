@@ -16,7 +16,7 @@ export default function Carousel({ images }: CarouselProps) {
       if (!galleryRef.current) return
 
       const Flickity = (await import('flickity')).default;
-      new Flickity(galleryRef.current, { wrapAround: true, lazyLoad: true })
+      new Flickity(galleryRef.current, { wrapAround: true, lazyLoad: true, prevNextButtons: false })
     }
     init()
   }, [galleryRef])
@@ -25,7 +25,7 @@ export default function Carousel({ images }: CarouselProps) {
     <>
       <div ref={galleryRef}>
         {images.map((image, index) => (
-          <Image key={index} {...image} className="my-20 mx-10 rounded-xl border-1 border-[#454545]" />
+          <Image key={index} {...image} className="my-8 lg:my-20 lg:mx-10 rounded-xl border-1 border-[#454545]" />
         ))}
       </div>
     </>

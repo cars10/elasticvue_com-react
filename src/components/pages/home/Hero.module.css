@@ -12,12 +12,9 @@
 }
 
 .heroBorder {
-  width: 1600px;
-  height: 700px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 200px;
   transform-style: preserve-3d;
   border: 1px solid #454545;
   outline: 1px solid transparent;

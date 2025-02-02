@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <>
       <div className={styles.heroWrapper}>
-        <div className={styles.heroBorder}>
+        <div className={`${styles.heroBorder} mt-20 lg:w-[1600px] lg:h-[900px] lg:mt-[200px]`}>
           <div className={styles.heroGrid}>
             <div className={styles.heroGridHeader}>
               <Image src={HeaderImage} alt="header" priority className={styles.fadeHeroImg} style={{ animationDelay: 2.0 + 's' }} />
