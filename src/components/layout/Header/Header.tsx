@@ -44,7 +44,7 @@ export default function Header() {
           </div>
 
           <div
-            className={`${menuOpen ? 'absolute left-0 top-16 flex w-full flex-col items-start gap-4 bg-primary py-4 shadow-main' : 'mr-14 hidden py-3 lg:mr-0 lg:flex'}`}
+            className={`${menuOpen ? 'absolute z-2 left-0 top-18 bottom-0 flex w-full flex-col items-start gap-4 bg-primary py-4 shadow-main' : 'mr-14 hidden py-3 lg:mr-0 lg:flex'}`}
             onClick={() => setMenuOpen(false)}
           >
             {links.map((attributes, index) => (
