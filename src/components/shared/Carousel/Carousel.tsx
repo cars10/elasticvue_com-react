@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import Flickity from 'flickity'
 import 'flickity/dist/flickity.min.css'
 import Image, { ImageProps } from 'next/image'
 
@@ -11,9 +10,15 @@ export default function Carousel({ images }: CarouselProps) {
   const galleryRef = useRef(null)
 
   useEffect(() => {
-    if (!galleryRef.current) return
+    if (!window) return
 
-    new Flickity(galleryRef.current, { wrapAround: true, lazyLoad: true })
+    const init = async () => {
+      if (!galleryRef.current) return
+
+      const Flickity = (await import('flickity')).default;
+      new Flickity(galleryRef.current, { wrapAround: true, lazyLoad: true })
+    }
+    init()
   }, [galleryRef])
 
   return (

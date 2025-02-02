@@ -13,13 +13,15 @@ export default function ForDevelopers() {
   ]
   return (
     <>
-      <div className="w-1/2 mx-auto my-60">
-        <h1 className="text-center text-5xl mb-20">Built for developers.</h1>
-        <p className="w-3/4 mx-auto text-center text-2xl text-neutral-300">
-          Elasticvue helps streamline your daily tasks. Effortlessly manage indices, inspect documents, and update data whenever needed.
-        </p>
+      <div className="py-60 mt-30 gradient">
+        <div className="w-1/2 mx-auto">
+          <h1 className="text-center text-5xl mb-20">Built for developers.</h1>
+          <p className="w-3/4 mx-auto text-center text-2xl text-neutral-300">
+            Elasticvue helps streamline your daily tasks. Effortlessly manage indices, inspect documents, and update data whenever needed.
+          </p>
 
-        <Carousel images={images} />
+          <Carousel images={images} />
+        </div>
       </div>
     </>
   )

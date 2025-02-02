@@ -22,17 +22,19 @@ export default function Availability() {
 
   return (
     <>
-      <div className="w-1/2 mx-auto my-60">
-        <h1 className="text-center text-5xl mb-20">Install it your way.</h1>
-        <div className="flex justify-around mb-20">
-          {versions.map((item) => (
-            <Button key={item.label} href={item.href} icon={item.icon} label={item.label} iconSize={20} />
-          ))}
-        </div>
+      <div className="py-60 gradient">
+        <div className="w-1/2 mx-auto">
+          <h1 className="text-center text-5xl mb-20">Install it your way.</h1>
+          <div className="flex justify-around mb-20">
+            {versions.map((item) => (
+              <Button key={item.label} href={item.href} icon={item.icon} label={item.label} iconSize={20} />
+            ))}
+          </div>
 
-        <p className="w-3/4 mx-auto text-center text-2xl text-neutral-300">
-          No matter if you prefer a browser extension, desktop app, docker container, or self-hosted version — elasticvue has you covered.
-        </p>
+          <p className="w-3/4 mx-auto text-center text-2xl text-neutral-300">
+            No matter if you prefer a browser extension, desktop app, docker container, or self-hosted version — elasticvue has you covered.
+          </p>
+        </div>
       </div>
     </>
   )
